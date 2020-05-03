@@ -21,8 +21,8 @@ module.exports = {
       // pass options to sass-loader
       sass: {
         // @/ is an alias to src/
-        // so this assumes you have a file named `src/variables.sass`
-        prependData: `@import "@/variables.sass"`
+        // so this assumes you have a file named `src/global.sass`
+        prependData: `@import "@/global.sass"`
       }
     }
   }

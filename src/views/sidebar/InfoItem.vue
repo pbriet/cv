@@ -15,21 +15,8 @@
       <div>
         {{ item.name }}
       </div>
-      <p>
-        <a
-          v-if="item.link"
-          class="grey--text"
-          :href="item.link"
-          target="_blank"
-        >
-          {{ item.text }}
-        </a>
-        <span
-          v-else
-          class="grey--text"
-        >
-          {{ item.text }}
-        </span>
+      <p class="grey--text">
+        {{ item.text }}
       </p>
     </v-flex>
   </v-layout>
@@ -37,7 +24,7 @@
 
 <script>
 export default {
-  name    : 'SidebarSectionItem',
+  name    : 'SidebarInfoItem',
   props   : { item: { type: Object, default: () => {} } },
   computed: {
     hasIcon () {

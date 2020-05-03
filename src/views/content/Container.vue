@@ -1,6 +1,6 @@
 <template>
   <v-card
-    color="grey lighten-4"
+    color="grey lighten-2"
     light
   >
     <v-card-text>
@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import ContentSection from '@/views/dark-template/content/Section'
+import ContentSection from '@/views/content/Section'
 export default {
   name      : 'MainContent',
   components: { ContentSection },

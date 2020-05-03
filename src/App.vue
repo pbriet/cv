@@ -1,17 +1,17 @@
 <template>
   <v-app>
     <v-content>
-      <dark-template-container />
+      <main-container />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import DarkTemplateContainer from '@/views/dark-template/Container'
+import MainContainer from '@/views/Container'
 
 export default {
   name      : 'App',
-  components: { DarkTemplateContainer },
+  components: { MainContainer },
   data () {
     return {}
   },

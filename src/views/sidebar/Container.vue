@@ -1,21 +1,26 @@
 <template>
   <v-card
-    color="grey darken-3"
+    id="sidebar"
+    color="primary darken-3"
     dark
   >
     <v-card-text>
       <avatar />
       <div class="text-sm-center mb-4 mt-3">
         <h1>
-          Amirreza <span class="light-blue--text text--lighten-3">Nasiri</span>
+          Pascal Briet
         </h1>
         <span>
-          A challenge-loving web developer
+          Ingénieur web en quête de challenge
         </span>
       </div>
 
-      <sidebar-section :options="sections.info" />
-      <sidebar-section :options="sections.socials" />
+      <sidebar-infos :options="sections.info" />
+
+      <sidebar-skills></sidebar-skills>
+
+
+
       <sidebar-section :options="sections.hobbies">
         <template v-slot:item="{item}">
           <v-chip>
@@ -33,7 +38,7 @@
           <v-container pa-0>
             <v-layout
               wrap
-              class="text-xs-center"
+              class="text-center"
             >
               <template
                 v-for="(item, i) in items"
@@ -65,11 +70,13 @@
 </template>
 
 <script>
-import Avatar from '@/views/dark-template/sidebar/Avatar'
-import SidebarSection from '@/views/dark-template/sidebar/Section'
+import Avatar from '@/sidebar/Avatar'
+import SidebarInfos from '@/sidebar/Infos'
+import SidebarSkills from '@/sidebar/Skills'
+
 export default {
   name      : 'Sidebar',
-  components: { SidebarSection, Avatar },
+  components: { SidebarInfos, SidebarSkills, Avatar },
   data () {
     return {
       sections: {
@@ -77,50 +84,15 @@ export default {
           title: 'INFO',
           items: [
             {
-              name: 'Email',
-              icon: 'mdi-email',
-              text: 'hi@amirreza.in',
-            },
-            {
-              name: 'Website',
-              icon: 'mdi-web',
-              text: 'amirreza.in',
-            },
-            {
-              name: 'Birth Date',
-              icon: 'mdi-cake-variant',
-              text: 'Dec 7, 1996',
-            },
-            {
-              name: 'Habitation',
+              name: 'Bretagne',
               icon: 'mdi-map-marker',
-              text: 'Tabriz, Iran',
-            },
-          ],
-        },
-        socials: {
-          title: 'SOCIALS',
-          items: [
-            {
-              icon: 'mdi-github-circle',
-              text: 'github.com/AmirrezaNasiri',
-              link: 'https://github.com/AmirrezaNasiri',
+              text: 'Télétravail partiel ou complet'
             },
             {
-              icon: 'mdi-linkedin-box',
-              text: 'linkedin.com/in/amirreza-nasiri',
-              link: 'https://linkedin.com/in/amirreza-nasiri',
-            },
-            {
-              icon: 'mdi-twitter',
-              text: 'twitter.com/Amirreza_Nasiri',
-              link: 'https://twitter.com/Amirreza_Nasiri',
-            },
-            {
-              icon: 'mdi-instagram',
-              text: 'instagram.com/amirreza.n96',
-              link: 'https://instagram.com/amirreza.n96',
-            },
+              name: '13 janvier 1985',
+              icon: 'mdi-cake-variant',
+              text: '35 ans'
+            }
           ],
         },
         hobbies: {
@@ -200,8 +172,9 @@ export default {
 }
 </script>
 
-<style scoped>
-.sidebar{
-    background: #2e2e2e;
-}
+<style scoped lang="sass">
+
+#sidebar
+  color: white
+
 </style>
