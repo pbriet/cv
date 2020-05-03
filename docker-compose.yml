@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+
+  cv:
+    build: .
+    volumes:
+      - ./src:/cv/src
+      - ./public:/cv/public
+    ports:
+      - "8090:8080"
+    depends_on:
+      - nginx-proxy
+    environment:
+      VIRTUAL_HOST: cv.localhost # Managed by nginx-proxy
+
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    volumes:
+      - '/var/run/docker.sock:/tmp/docker.sock:ro'
+    ports:
+      - "80:80"
+    logging:
+      driver: "none" # Disable logging of this container
+
