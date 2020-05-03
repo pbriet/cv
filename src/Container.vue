@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import SidebarContainer from '@/views/sidebar/Container'
-import ContentContainer from '@/views/content/Container'
+import SidebarContainer from '@/sidebar/Container'
+import ContentContainer from '@/content/Container'
 
 export default {
   name      : 'MainContainer',

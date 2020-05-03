@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import MainContainer from '@/views/Container'
+import MainContainer from '@/Container'
 
 export default {
   name      : 'App',
