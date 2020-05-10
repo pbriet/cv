@@ -35,13 +35,28 @@
         title="Compétences techniques"
         mono-version
       >
-        <v-select
-          v-model="techTypes"
-          :items="techTypesChoices"
-          item-text="label"
-          item-value="value"
-          label="Type"
-        />
+        <v-row>
+          <v-col cols="6" lg="4">
+            <v-select
+              v-model="techTypes"
+              :items="techTypesChoices"
+              item-text="label"
+              item-value="value"
+              label="Type"
+            />
+          </v-col>
+          <v-col cols="6">
+            <v-select
+              v-model="levels"
+              multiple
+              chips
+              :items="levelChoices"
+              item-text="label"
+              item-value="value"
+              label="Niveau"
+            />
+          </v-col>
+        </v-row>
         <v-container id="tech-list">
           <transition-group
             id="tech-transition-group"
@@ -65,8 +80,8 @@
                     {{ tech.icon }}
                   </v-icon>
                   <v-img
-                    v-if="tech.svg"
-                    :src="tech.svg"
+                    v-if="tech.img"
+                    :src="tech.img"
                   />
                   <span class="tech-title">
                     {{ tech.name }}
@@ -74,15 +89,13 @@
                 </v-card-title>
 
                 <v-card-text>
-                  <div class="headline">
-                    {{ tech.experience }}
+                  <div v-if="tech.experience">
+                    <div class="headline">
+                      {{ tech.experience }}
+                    </div>
+                    années<br>
                   </div>
-                  années<br>
 
-                  <span
-                    class="medal-badge"
-                    :color="tech.medal"
-                  />
                 </v-card-text>
               </v-card>
             </div>
@@ -106,43 +119,132 @@ export default {
         { value: 'all', label: 'Toutes' },
         { value: 'back', label: 'Backend' },
         { value: 'front', label: 'Frontend' },
-        { value: 'devops', label: 'DevOps' }
+        { value: 'devops', label: 'DevOps / Système' }
+      ],
+      levels: ['expert', 'high'],
+      levelChoices : [
+        { value: 'expert', label: 'Expert' },
+        { value: 'high', label: 'Avancé' },
+        { value: 'medium', label: 'Moyen' },
       ],
       techs: [
-        {
-          categories: ['front'],
-          icon: 'mdi-vuejs',
-          name: 'VueJS',
-          medal: 'silver',
-          experience: 3
-        },
         {
           categories: ['back'],
           icon: 'mdi-language-python',
           name: 'Python',
-          medal: 'gold',
+          level: 'expert',
           experience: 13
         },
         {
           categories: ['back'],
-          svg: '/img/techs/django.svg',
+          img: '/img/techs/django.svg',
           name: 'Django',
-          medal: 'gold',
+          level: 'expert',
           experience: 7
         },
         {
           categories: ['devops'],
           icon: 'mdi-docker',
           name: 'Docker',
-          medal: 'silver',
+          level: 'high',
           experience: 4
+        },
+        {
+          categories: ['front'],
+          icon: 'mdi-vuejs',
+          name: 'VueJS',
+          level: 'high',
+          experience: 3
         },
         {
           categories: ['devops'],
           icon: 'mdi-ansible',
           name: 'Ansible',
-          medal: 'silver',
+          level: 'high',
           experience: 7
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-linux',
+          name: 'Linux',
+          level: 'high',
+          experience: 9
+        },
+        {
+          categories: ['front'],
+          icon: 'mdi-angular',
+          name: 'AngularJS',
+          level: 'high',
+          experience: 4
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-kubernetes',
+          name: 'Kubernetes',
+          level: 'high',
+          experience: 2
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-source-branch',
+          name: 'GIT',
+          level: 'high',
+          experience: 9
+        },
+        {
+          categories: ['front'],
+          icon: 'mdi-webpack',
+          name: 'Webpack',
+          level: 'medium',
+          experience: 2
+        },
+        {
+          categories: ['back'],
+          icon: 'mdi-database-search',
+          name: 'SQL',
+          level: 'high',
+          experience: 9
+        },
+        {
+          categories: ['back'],
+          img: '/img/techs/mongo.jpeg',
+          name: 'MongoDB',
+          level: 'medium',
+          experience: 9
+        },
+        {
+          categories: ['back'],
+          icon: 'mdi-language-cpp',
+          name: 'C++',
+          level: 'high',
+          experience: 8
+        },
+        {
+          categories: ['front'],
+          icon: 'mdi-language-html5',
+          name: 'HTML',
+          level: 'high',
+          experience: 14
+        },
+        {
+          categories: ['front'],
+          icon: 'mdi-language-javascript',
+          name: 'Javascript',
+          level: 'high',
+          experience: 10
+        },
+        {
+          categories: ['back'],
+          img: '/img/techs/flask.png',
+          name: 'Flask',
+          level: 'medium',
+          experience: 10
+        },
+        {
+          categories: ['back'],
+          icon: 'mdi-cogs',
+          name: 'Algorithmie',
+          level: 'high'
         },
       ]
     }
@@ -153,6 +255,9 @@ export default {
       for (var tech of this.techs) {
         tech = JSON.parse(JSON.stringify(tech))
         if (this.techTypes !== 'all' && !tech.categories.includes(this.techTypes)) {
+          continue
+        }
+        if (!this.levels.includes(tech.level)) {
           continue
         }
         res.push(tech)
@@ -174,6 +279,7 @@ export default {
 .tech
   margin-top: 10px
   padding-right: 30px
+  width: 100%
   display: inline-block
   .v-image
     max-width: 36px
@@ -210,7 +316,7 @@ export default {
 
   .tech-col
     display: flex
-    flex: 0 0 20%
+    flex: 0 0 30%
     margin-left: 10px
     margin-right: 10px
     justify-content: space-around
