@@ -2,7 +2,6 @@ import Vue from 'vue'
 import helper from '@/plugins/helper'
 import App from '@/App.vue'
 import vuetify from './plugins/vuetify';
-import '@/components'
 
 Vue.config.productionTip = false
 Vue.use(helper)
