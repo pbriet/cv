@@ -23,15 +23,16 @@
     </v-card-title>
     <v-card-text>
       <slot
-        v-if="!monoVersion && !detailed"
+        v-if="!monoSlot && !detailed"
         name="short-version"
       />
       <slot
-        v-if="monoVersion && detailed"
+        v-if="monoSlot && detailed"
         name="long-version"
       />
       <slot
-        v-if="monoVersion"
+        v-if="monoSlot"
+        v-bind:detailed="detailed"
         name="default"
       />
     </v-card-text>
@@ -44,7 +45,7 @@ export default {
   components: { },
   props     : {
     title: { type: String, default: '' },
-    monoVersion: { type: Boolean, default: false }
+    monoSlot: { type: Boolean, default: false }
   },
   data () {
     return {

@@ -33,74 +33,83 @@
       <content-section
         id="skills-list"
         title="Compétences techniques"
-        mono-version
+        mono-slot
       >
-        <v-row>
-          <v-col cols="6" lg="4">
-            <v-select
-              v-model="techTypes"
-              :items="techTypesChoices"
-              item-text="label"
-              item-value="value"
-              label="Type"
-            />
-          </v-col>
-          <v-col cols="6">
-            <v-select
-              v-model="levels"
-              multiple
-              chips
-              :items="levelChoices"
-              item-text="label"
-              item-value="value"
-              label="Niveau"
-            />
-          </v-col>
-        </v-row>
-        <v-container id="tech-list">
-          <transition-group
-            id="tech-transition-group"
-            name="list"
-            tag="div"
-          >
-            <div
-              v-for="tech in filteredTechs"
-              :key="tech.name"
-              class="tech-col"
+        <template v-slot:default="slotProps">
+          <v-row id="tech-filters"  align="start">
+            <v-col
+                id="tech-type-select-col"
+                cols="6"
+                lg="4"
             >
-              <v-card
-                class="tech"
+              <v-select
+                v-model="techTypes"
+                :items="techTypesChoices"
+                item-text="label"
+                item-value="value"
+                label="Type"
+              />
+            </v-col>
+            <v-col cols="6">
+              <v-select
+                v-model="levels"
+                multiple
+                chips
+                :items="levelChoices"
+                item-text="label"
+                item-value="value"
+                label="Niveau"
+              />
+            </v-col>
+          </v-row>
+          <v-container
+            id="tech-list"
+            :class="{ 'small-techs': !slotProps.detailed }"
+          >
+            <transition-group
+              id="tech-transition-group"
+              name="list"
+              tag="div"
+            >
+              <div
+                v-for="tech in filteredTechs"
+                :key="tech.name"
+                class="tech-col"
               >
-                <v-card-title>
-                  <v-icon
-                    v-if="tech.icon"
-                    large
-                    left
-                  >
-                    {{ tech.icon }}
-                  </v-icon>
-                  <v-img
-                    v-if="tech.img"
-                    :src="tech.img"
-                  />
-                  <span class="tech-title">
-                    {{ tech.name }}
-                  </span>
-                </v-card-title>
+                <v-card
+                  class="tech"
+                >
+                  <v-card-title>
+                    <v-icon
+                      v-if="tech.icon"
+                      :large="slotProps.detailed"
+                      left
+                    >
+                      {{ tech.icon }}
+                    </v-icon>
+                    <v-img
+                      v-if="tech.img"
+                      :src="tech.img"
+                    />
+                    <span class="tech-title">
+                      {{ tech.name }}
+                    </span>
+                  </v-card-title>
 
-                <v-card-text>
-                  <div v-if="tech.experience">
-                    <div class="headline">
-                      {{ tech.experience }}
+                  <v-card-text>
+                    <div v-if="tech.experience">
+                      <div class="headline">
+                        {{ tech.experience }}
+                      </div>
+                      années<br>
                     </div>
-                    années<br>
-                  </div>
 
-                </v-card-text>
-              </v-card>
-            </div>
-          </transition-group>
-        </v-container>
+                  </v-card-text>
+                </v-card>
+              </div>
+            </transition-group>
+          </v-container>
+        </template>
       </content-section>
     </v-card-text>
   </v-card>
@@ -268,6 +277,12 @@ export default {
 }
 </script>
 
+<style lang="sass">
+#tech-filters
+  .v-text-field__details
+    display: none
+</style>
+
 <style scoped lang="sass">
 .title
   border-bottom: 2px #bfbfbf solid
@@ -276,9 +291,15 @@ export default {
 .progress
   margin-top: 0.1rem
 
+#tech-filters
+  .v-select
+    max-height: 40px
+
+#tech-type-select-col
+  padding-top: 21px
+
 .tech
   margin-top: 10px
-  padding-right: 30px
   width: 100%
   display: inline-block
   .v-image
@@ -292,8 +313,36 @@ export default {
   &:hover
     box-shadow: 0px 12px 4px -8px $secondary-color, 0px 8px 8px 0px $secondary-color, 0px 4px 20px 0px $secondary-color
 
+
 #tech-list
   padding-top: 20px
+
+  .tech-col
+    display: flex
+    flex: 0 0 30%
+    justify-content: space-around
+    transition: all 1s
+
+  &.small-techs
+    .tech-col
+      flex: 0 0 18%
+      .v-card__title
+        font-size: 0.8em
+        line-height: 0.8em
+      .v-card__text
+        display: none
+      .v-image
+        max-width: 24px
+        max-height: 24px
+
+
+#tech-transition-group
+
+  width: 100%
+  display: flex
+  flex: 1 1 auto
+  flex-wrap: wrap
+  justify-content: space-around !important
 
 
 .list-move
@@ -305,21 +354,5 @@ export default {
 .list-leave-to, .list-enter
   opacity: 0
 
-
-#tech-transition-group
-
-  width: 100%
-  display: flex
-  flex: 1 1 auto
-  flex-wrap: wrap
-  justify-content: space-around !important
-
-  .tech-col
-    display: flex
-    flex: 0 0 30%
-    margin-left: 10px
-    margin-right: 10px
-    justify-content: space-around
-    transition: all 1s
 
 </style>
