@@ -5,17 +5,6 @@
     light
   >
     <v-card-text>
-      <content-section
-        title="Qui suis-je ?"
-      >
-        <template slot="short-version">
-          Un développeur <b>full-stack</b> et architecte logiciel avec 13 ans d'expérience.<br>
-          Un esprit d'entrepreneur, pragmatique, rigoureux et efficace.
-        </template>
-        <template slot="long-version">
-          TODO
-        </template>
-      </content-section>
 
       <content-section
         title="Ce que je cherche"
@@ -25,7 +14,22 @@
           Idéalement orienté <b>Devops</b>, mais possiblement IA ou autre.
         </template>
         <template slot="long-version">
-          TODO
+          <div>
+            <h3>Un challenge intellectuel</h3>
+
+            Mon principal moteur est ma soif de connaissances. J'aime apprendre, me confronter à de nouveaux problèmes, les solutionner de manière élégante. J'y trouve beaucoup de satisfaction.<br/><br/>
+
+            Ayant désormais une bonne maîtrise de la plupart des problématiques backend/frontend, j'aimerais tendre vers une nouvelle direction : DevOPS, Intelligence Artificielle, ou autre univers connexe au développement.
+
+            <h3>Des collègues qualifiés</h3>
+
+            J'aimerais rejoindre une équipe compétente et ambitieuse (au bon sens du terme). Des personnes investies dans le projet d'entreprise, et surtout bienveillantes.
+
+            <h3>Une entreprise ouverte au télé-travail</h3>
+
+            Je pratique le télé-travail complet depuis 7 ans. J'y suis donc parfaitement familiarisé, et ma personnalité s'y prête bien. Néanmoins, mon idéal serait du télétravail à 50-60%, pour un meilleur équilibre de vie.
+
+          </div>
         </template>
       </content-section>
 
@@ -36,7 +40,10 @@
         mono-slot
       >
         <template v-slot:default="slotProps">
-          <v-row id="tech-filters"  align="start">
+          <v-row
+            id="tech-filters"
+            align="start"
+          >
             <v-col
                 id="tech-type-select-col"
                 cols="6"
@@ -80,20 +87,26 @@
                   class="tech"
                 >
                   <v-card-title>
-                    <v-icon
-                      v-if="tech.icon"
-                      :large="slotProps.detailed"
-                      left
-                    >
-                      {{ tech.icon }}
-                    </v-icon>
-                    <v-img
-                      v-if="tech.img"
-                      :src="tech.img"
-                    />
-                    <span class="tech-title">
-                      {{ tech.name }}
-                    </span>
+                    <v-row align="center">
+                      <v-col :cols="nbColsIcon(slotProps.detailed)">
+                        <v-icon
+                          v-if="tech.icon"
+                          :large="slotProps.detailed"
+                          left
+                        >
+                          {{ tech.icon }}
+                        </v-icon>
+                        <v-img
+                          v-if="tech.img"
+                          :src="tech.img"
+                        />
+                      </v-col>
+                      <v-col :cols="nbColsTechTitle(slotProps.detailed)">
+                        <span class="tech-title">
+                          {{ tech.name }}
+                        </span>
+                      </v-col>
+                    </v-row>
                   </v-card-title>
 
                   <v-card-text>
@@ -103,7 +116,6 @@
                       </div>
                       années<br>
                     </div>
-
                   </v-card-text>
                 </v-card>
               </div>
@@ -273,6 +285,20 @@ export default {
       }
       return res
     }
+  },
+  methods: {
+    nbColsIcon (detailed) {
+      if (detailed) {
+        return 3
+      }
+      return 4
+    },
+    nbColsTechTitle (detailed) {
+      if (detailed) {
+        return 9
+      }
+      return 8
+    }
   }
 }
 </script>
@@ -287,6 +313,12 @@ export default {
 .title
   border-bottom: 2px #bfbfbf solid
   line-height: 1.5 !important
+
+h3
+  &:not(:first-child)
+    margin-top: 10px
+  font-weight: 500
+  color: $pink-color
 
 .progress
   margin-top: 0.1rem

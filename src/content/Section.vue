@@ -22,19 +22,21 @@
       <slot name="actions" />
     </v-card-title>
     <v-card-text>
-      <slot
-        v-if="!monoSlot && !detailed"
-        name="short-version"
-      />
-      <slot
-        v-if="monoSlot && detailed"
-        name="long-version"
-      />
-      <slot
-        v-if="monoSlot"
-        v-bind:detailed="detailed"
-        name="default"
-      />
+      <div
+        v-show="!monoSlot && !detailed"
+      >
+        <slot name="short-version"/>
+      </div>
+      <div
+        v-show="!monoSlot && detailed"
+      >
+        <slot name="long-version"/>
+      </div>
+      <div
+        v-show="monoSlot"
+      >
+        <slot :detailed="detailed" name="default"/>
+      </div>
     </v-card-text>
   </v-card>
 </template>

@@ -26,7 +26,21 @@
         <div class="title mb-3">
           Profil
         </div>
-        <sidebar-skills></sidebar-skills>
+        <sidebar-skills/>
+      </div>
+
+      <div class="mb-4">
+        <div class="title mb-3">
+          Points clés
+        </div>
+        <ul>
+          <li>Développeur <b>full-stack</b></li>
+          <li>Architecte logiciel</li>
+          <li>13 ans d'expérience</li>
+          <li>Esprit d'entrepreneur</li>
+          <li>Pragmatique</li>
+          <li>Rigoureux et efficace</li>
+        </ul>
       </div>
 
     </v-card-text>
