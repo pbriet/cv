@@ -62,9 +62,9 @@ export default {
           title: 'INFO',
           items: [
             {
-              name: 'Bretagne',
+              name: 'Annecy (Haute-savoie)',
               icon: 'mdi-map-marker',
-              text: 'Télétravail partiel ou complet'
+              text: 'A partir de mi-Août 2020'
             },
             {
               name: '13 janvier 1985',
