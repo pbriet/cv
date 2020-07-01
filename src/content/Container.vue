@@ -22,7 +22,7 @@
 
             <h3>De l'émulation</h3>
 
-            J'aimerais rejoindre une équipe compétente et ambitieuse (au bon sens du terme). Des personnes investies dans le projet d'entreprise, et surtout bienveillantes.
+            J'aimerais rejoindre une équipe compétente et ambitieuse (au bon sens du terme). Des personnes investies dans le projet d'entreprise et bienveillantes.
 
             <h3>Une entreprise ouverte au télé-travail</h3>
 
@@ -66,11 +66,11 @@
             <br><br>
 
             Pour autant, je ne suis pas un perfectionniste, mais un pragmatique. Si les délais sont courts, il faut aller à l'essentiel et faire les sacrifices nécessaires.<br>
-            Quand je m'engage sur une date, je tiens toujours mes délais (peu commun dans le métier !)
+            Quand je m'engage sur une date, je tiens toujours mes délais (peu commun dans le milieu !)
 
-            <h3>Discret mais leader</h3>
+            <h3>Leadership horizontal</h3>
 
-            D'un naturel plutôt discret, toutes mes expériences professionnelles m'ont amené à prendre le lead des équipes dans lesquelles j'ai été. Dans le cadre privé, je ne suis pas un grand bavard, mais dans le cadre professionnel je suis communiquant - avec un bon esprit de synthèse.
+            Bien que d'un naturel plutôt discret, j'ai toujours naturellement pris le lead des équipes dans lesquelles j'ai été (et ce, même en télétravail). Je sais organiser, accompagner, écouter, impulser de nouvelles pratiques. J'ai une forte préférence pour les organisations peu hiérarchiques.
 
           </div>
         </template>

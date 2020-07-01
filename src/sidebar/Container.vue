@@ -70,6 +70,11 @@ export default {
               name: '13 janvier 1985',
               icon: 'mdi-cake-variant',
               text: '35 ans'
+            },
+            {
+              name: 'Disponible Octobre 2020',
+              icon: 'mdi-calendar',
+              text: 'Entretiens à partir de mi-Août'
             }
           ],
         }

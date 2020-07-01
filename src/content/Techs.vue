@@ -118,6 +118,7 @@ export default {
           level: 'expert',
           experience: 13,
           details: [
+            '100% orienté objet',
             'Tout l\'univers du web',
             'Bibliothèques scientifiques (numpy, matplotlib, ...)',
             'Bonne maîtrise des mécanismes internes'
@@ -132,7 +133,7 @@ export default {
           details: [
             'API REST',
             'ORM, MongoEngine, migrations, optimisation',
-            'Middlewares, widgets, templatetags, ...',
+            'Middlewares, widgets, templatetags, cache, ...',
             'Celery'
           ]
         },

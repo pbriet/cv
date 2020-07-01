@@ -146,7 +146,7 @@ export default {
           tags: ['Backend', 'English spoken']
         },
         { date: '2007-2011',
-          company: 'OptimProcess',
+          company: 'OptimProcess (Paris)',
           title: 'Ingénieur logiciel',
           shortContent: 'Développement d\'un logiciel Windows d\'analyse de données industrielles',
           companyDetails: 'Editeur d\'une solution d\'analyse des défauts de production sur les chaînes de production industrielles',
@@ -163,6 +163,21 @@ export default {
             { label: 'Acquisition par BearingPoint', url: 'https://www.lemondeinformatique.fr/actualites/lire-bearingpoint-s-offre-optimprocess-specialise-dans-l-optimisation-des-procedes-industriels-68193.html' }
           ],
           tags: ['Logiciel Windows', 'Scrum']
+        },
+        { date: '2005',
+          company: 'Critéo (Paris)',
+          title: 'Stagiaire',
+          shortContent: 'Premier "employé" de Critéo, les tous premiers jours d\'une grande entreprise française !',
+          companyDetails: 'Expert du reciblage publicitaire',
+          roles: [
+            'Premier "employé" de Critéo, les tous premiers jours !',
+            'Développement de la première maquette produit (PHP)'
+          ],
+          techs: [
+            'PHP',
+            'MySQL'
+          ],
+          tags: ['Stage', 'Anecdote']
         },
       ]
     }
