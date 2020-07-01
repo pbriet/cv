@@ -58,3 +58,9 @@ export default {
   background: linear-gradient(to left, $bgcolor-1, $bgcolor-2)
   background-size: cover
 </style>
+
+<style lang="sass">
+body, .v-card__subtitle, .v-card__text
+    font-size: 0.95rem
+    line-height: 1.4rem
+</style>

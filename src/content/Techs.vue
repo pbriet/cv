@@ -47,8 +47,8 @@
             class="tech"
           >
             <v-card-title>
-              <v-row align="center">
-                <v-col :cols="nbColsIcon(detailed)">
+              <v-row justify="center">
+                <v-col :cols="nbColsIcon(detailed)" class="text-center">
                   <v-icon
                     v-if="tech.icon"
                     :large="detailed"
@@ -61,7 +61,7 @@
                     :src="tech.img"
                   />
                 </v-col>
-                <v-col :cols="nbColsTechTitle(detailed)">
+                <v-col :cols="nbColsTechTitle(detailed)"  class="text-center">
                   <span class="tech-title">
                     {{ tech.name }}
                   </span>
@@ -72,9 +72,15 @@
             <v-card-text>
               <div v-if="tech.experience">
                 <div class="headline">
-                  {{ tech.experience }}
+                  {{ tech.experience }} années
                 </div>
-                années<br>
+              </div>
+              <div v-if="tech.details" class="tech-details">
+                <ul>
+                  <li v-for="detail in tech.details" :key="detail">
+                    {{ detail }}
+                  </li>
+                </ul>
               </div>
             </v-card-text>
           </v-card>
@@ -110,91 +116,155 @@ export default {
           icon: 'mdi-language-python',
           name: 'Python',
           level: 'expert',
-          experience: 13
+          experience: 13,
+          details: [
+            'Tout l\'univers du web',
+            'Bibliothèques scientifiques (numpy, matplotlib, ...)',
+            'Bonne maîtrise des mécanismes internes'
+          ]
         },
         {
           categories: ['back'],
           img: '/img/techs/django.svg',
           name: 'Django',
           level: 'expert',
-          experience: 7
+          experience: 7,
+          details: [
+            'API REST',
+            'ORM, MongoEngine, migrations, optimisation',
+            'Middlewares, widgets, templatetags, ...',
+            'Celery'
+          ]
         },
         {
           categories: ['devops'],
           icon: 'mdi-docker',
           name: 'Docker',
           level: 'high',
-          experience: 4
+          experience: 4,
+          details: [
+            'Projets multi-containers avec Docker-compose',
+            'Volumes, réseaux',
+            'Multi-stage builds, optimisations, ...'
+          ]
         },
         {
           categories: ['front'],
           icon: 'mdi-vuejs',
           name: 'VueJS',
           level: 'high',
-          experience: 3
+          experience: 3,
+          details: [
+            'Développement de gros projets SPA',
+            'VueX, Vuetify, Vue-router'
+          ]
         },
         {
           categories: ['devops'],
           icon: 'mdi-ansible',
           name: 'Ansible',
           level: 'high',
-          experience: 7
+          experience: 7,
+          details: [
+            'Déploiement de projets iso dev/staging/prod',
+            'Rôles, templates, handlers'
+          ]
         },
         {
           categories: ['devops'],
           icon: 'mdi-linux',
           name: 'Linux',
           level: 'high',
-          experience: 9
+          experience: 9,
+          details: [
+            'Administration : utilisateurs, SSH, sudoers',
+            'Gestion de paquets. Installations / Configurations.',
+            'cron, systemd, rotation de logs',
+            'Distris : Debian, Ubuntu. Egalement : Alpine'
+          ]
         },
         {
           categories: ['front'],
           icon: 'mdi-angular',
           name: 'AngularJS',
           level: 'high',
-          experience: 4
+          experience: 4,
+          details: [
+            'Gros projet SPA',
+            'Problématiques de SEO (génération statique)'
+          ]
         },
         {
           categories: ['devops'],
           icon: 'mdi-kubernetes',
           name: 'Kubernetes',
           level: 'high',
-          experience: 2
+          experience: 2,
+          details: [
+            'Configuration from scratch sur 2 projets',
+            'Google Cloud, Amazon EKS (kube2iam, ALB, external-secrets)',
+            'Skaffold, Helm, Minikube',
+            'Configs, Secrets, Jobs, Deployment, Ingress, Services',
+            'Ligne de commande'
+          ]
         },
         {
           categories: ['devops'],
           icon: 'mdi-source-branch',
           name: 'GIT',
           level: 'high',
-          experience: 9
+          experience: 9,
+          details: [
+            'Utilisation quotidienne',
+            'clone, checkout, commit, pull, push, logs, ...',
+            'Rarement : cherry-pick, rebase'
+          ]
         },
         {
           categories: ['front'],
           icon: 'mdi-webpack',
           name: 'Webpack',
           level: 'medium',
-          experience: 2
+          experience: 2,
+          details: [
+            'Configuration pour VueJS (via vue-cli)',
+            'Quelques customisations (configureWebpack, chainWebpack, ...)'
+          ]
         },
         {
           categories: ['back'],
           icon: 'mdi-database-search',
           name: 'SQL',
           level: 'high',
-          experience: 9
+          experience: 9,
+          details: [
+            'Requêtage (direct ou via ORM)',
+            'PostgreSQL, MySQL',
+            'Administration : uniquement les bases',
+            'Optimisation de requêtes'
+          ]
         },
         {
           categories: ['back'],
           img: '/img/techs/mongo.jpeg',
           name: 'MongoDB',
           level: 'medium',
-          experience: 9
+          experience: 9,
+          details: [
+            'Requêtage (direct ou via ORM)',
+            'MongoAtlas'
+          ]
         },
         {
           categories: ['back'],
           icon: 'mdi-language-cpp',
           name: 'C++',
           level: 'high',
-          experience: 8
+          experience: 8,
+          details: [
+            'Utilisation avancée (méthodes templatées)',
+            'Peu manipulé ces dernières années'
+          ]
         },
         {
           categories: ['front'],
@@ -208,20 +278,33 @@ export default {
           icon: 'mdi-language-javascript',
           name: 'Javascript',
           level: 'high',
-          experience: 10
+          experience: 10,
+          details: [
+            'Longue expérience (jQuery, AngularJS, VueJS, ES6)',
+            'Uniquement côté client (pas de NodeJS)'
+          ]
         },
         {
           categories: ['back'],
           img: '/img/techs/flask.png',
           name: 'Flask',
           level: 'medium',
-          experience: 10
+          experience: 3,
+          details: [
+            'API REST',
+            'Flask-cors, Flask-jwt, Flask-socketio'
+          ]
         },
         {
           categories: ['back'],
           icon: 'mdi-cogs',
           name: 'Algorithmie',
-          level: 'high'
+          level: 'high',
+          details: [
+            'Spécialisation master',
+            'Datamining',
+            'Optimisation avec heuristique'
+          ]
         },
       ],
       experiences: [
@@ -255,13 +338,13 @@ export default {
       if (detailed) {
         return 3
       }
-      return 4
+      return 12
     },
     nbColsTechTitle (detailed) {
       if (detailed) {
         return 9
       }
-      return 8
+      return 12
     }
   }
 }
@@ -297,6 +380,12 @@ export default {
   &:hover
     box-shadow: 0px 12px 4px -8px $secondary-color, 0px 8px 8px 0px $secondary-color, 0px 4px 20px 0px $secondary-color
 
+  .tech-details
+    padding-top: 10px
+    font-size: 0.85rem
+    ul
+      padding-left: 15px
+
 
 #tech-list
   padding-top: 20px
@@ -305,19 +394,25 @@ export default {
     display: flex
     flex: 0 0 30%
     justify-content: space-around
-    transition: all 1s
+    transition: transform 0.8s ease
 
   &.small-techs
     .tech-col
-      flex: 0 0 18%
+      flex: 0 0 15%
       .v-card__title
         font-size: 0.8em
         line-height: 0.8em
+        padding: 2px
       .v-card__text
         display: none
       .v-image
         max-width: 24px
         max-height: 24px
+
+  &:not(.small-techs)
+    .v-card__title
+      height: 80px
+
 
 
 #tech-transition-group
@@ -330,7 +425,7 @@ export default {
 
 
 .list-move
-  transition: all 1s
+  transition: transform 0.8s ease
 
 .list-leave-active
   position: absolute

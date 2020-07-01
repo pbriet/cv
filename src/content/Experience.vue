@@ -3,13 +3,12 @@
     <v-timeline
       dense
       align-top
-      :small="!detailed"
     >
       <v-timeline-item
         v-for="experience in experiences"
         :key="experience.title"
         color="secondary darken-4"
-        :small="small"
+        :small="true"
       >
         <v-card class="elevation-2">
           <v-card-title class="headline">
@@ -51,6 +50,15 @@
                 </ul>
               </div>
             </template>
+            <div class="exp-tags" v-if="experience.tags">
+              <v-chip
+                v-for="item in experience.tags"
+                :key="item"
+                class="ma-2"
+              >
+                {{ item }}
+              </v-chip>
+            </div>
           </v-card-text>
         </v-card>
       </v-timeline-item>
@@ -89,7 +97,8 @@ export default {
           links: [
             { label: 'Les Octets Libres', url: 'https://www.lesoctetslibres.com' },
             { label: 'SLEAD', url: 'https://www.slead.co' }
-          ]
+          ],
+          tags: ['Backend', 'Devops', 'Entrepreneuriat']
         },
         { date: '2013-2016',
           company: 'Cook&Be (Quimperlé)',
@@ -114,7 +123,8 @@ export default {
           ],
           links: [
             { label: 'Cook&Be', url: 'https://www.cookandbe.com' }
-          ]
+          ],
+          tags: ['FullStack', 'Entrepreneuriat']
         },
         { date: '2011-2013',
           company: 'Optimor Labs (Oxford)',
@@ -132,7 +142,8 @@ export default {
           ],
           links: [
             { label: 'BillMonitor', url: 'https://www.billmonitor.com/' }
-          ]
+          ],
+          tags: ['Backend', 'English spoken']
         },
         { date: '2007-2011',
           company: 'OptimProcess',
@@ -150,7 +161,8 @@ export default {
           ],
           links: [
             { label: 'Acquisition par BearingPoint', url: 'https://www.lemondeinformatique.fr/actualites/lire-bearingpoint-s-offre-optimprocess-specialise-dans-l-optimisation-des-procedes-industriels-68193.html' }
-          ]
+          ],
+          tags: ['Logiciel Windows', 'Scrum']
         },
       ]
     }
@@ -163,4 +175,9 @@ export default {
     font-weight: bold
   .exp-section
     padding-top: 10px
+</style>
+
+<style lang="sass">
+  .v-timeline-item__dot
+    margin-top: 10px
 </style>
