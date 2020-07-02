@@ -6,7 +6,8 @@
     >
       <v-col
         id="tech-type-select-col"
-        cols="6"
+        cols="12"
+        sm="6"
         lg="4"
       >
         <v-select
@@ -17,7 +18,7 @@
           label="Type"
         />
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" sm="6">
         <v-select
           v-model="levels"
           multiple
@@ -409,6 +410,13 @@ export default {
       .v-image
         max-width: 24px
         max-height: 24px
+
+
+  @media screen and (max-width: 640px)
+    .tech-col
+      flex: 0 0 100%
+    &.small-techs .tech-col
+      flex: 0 0 30%
 
   &:not(.small-techs)
     .v-card__title

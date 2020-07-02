@@ -13,11 +13,17 @@
           <v-switch
             v-model="detailed"
             dense
-            class="title-switch"
+            class="title-switch d-none d-sm-flex"
             :label="detailed ? 'Version longue' : 'Version courte'"
           />
         </div>
       </div>
+      <v-switch
+        v-model="detailed"
+        dense
+        class="title-switch title-switch-xs d-sm-none"
+        :label="detailed ? 'Version longue' : 'Version courte'"
+      />
       <v-spacer />
       <slot name="actions" />
     </v-card-title>
@@ -69,6 +75,9 @@ export default {
     .v-label
       font-weight: 400
       font-size: 14px
+
+  .title-switch-xs
+    padding-top: 10px
 
   .switch-col
     text-align: right

@@ -43,6 +43,36 @@
         </ul>
       </div>
 
+
+      <div class="mb-4">
+        <div class="title mb-3">
+          Loisirs
+        </div>
+        <v-row>
+          <v-col cols="6">
+            <div class="leasure">
+              <v-icon>mdi-feather</v-icon> Ecriture
+            </div>
+            <div class="leasure">
+              <v-icon>mdi-earth</v-icon> Géopolitique
+            </div>
+          </v-col>
+          <v-col cols="6">
+            <div class="leasure">
+              <v-icon>mdi-tennis</v-icon> Badminton
+            </div>
+          </v-col>
+        </v-row>
+      </div>
+
+      <div class="mb-4">
+        <div class="title mb-3">
+          Langues
+        </div>
+        Français : natif<br/>
+        Anglais : professionnel
+      </div>
+
     </v-card-text>
   </v-card>
 </template>
@@ -69,7 +99,7 @@ export default {
             {
               name: '13 janvier 1985',
               icon: 'mdi-cake-variant',
-              text: '35 ans'
+              text: '35 ans - Français'
             },
             {
               name: 'Disponible Octobre 2020',
@@ -94,5 +124,10 @@ export default {
   font-weight: 300
   line-height: 1.5 !important
   letter-spacing: 0.2em !important
+
+.leasure
+  padding-bottom: 8px
+  .v-icon
+    margin-right: 5px
 
 </style>
