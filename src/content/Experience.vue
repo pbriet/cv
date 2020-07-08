@@ -33,6 +33,14 @@
                   </li>
                 </ul>
               </div>
+              <div class="exp-section" v-if="experience.projects">
+                <div class="exp-title">Projets principaux :</div>
+                <ul>
+                  <li v-for="project in experience.projects" :key="project">
+                    {{ project }}
+                  </li>
+                </ul>
+              </div>
               <div class="exp-section">
                 <div class="exp-title">Technologies :</div>
                 <ul>
@@ -85,7 +93,15 @@ export default {
             'Développeur backoffice',
             'Développeur front',
             'Devops',
-            'Stratégie d\'entreprise'
+            'Stratégie d\'entreprise (marketing, commercial)',
+            'Co-fondateur'
+          ],
+          projects: [
+            'Outil de réalisation de devis automatisés pour les commerciaux d\'une PME d\'expertise comptable (lié à Salesforce)',
+            'Outil de réalisation de devis sur site public (https://www.slead.co)',
+            'Backoffice pour site de mise en relation de vétérinaire en ligne (téléphone, visio, ...)',
+            'Outil de suivi de l\'entretien des bâtiments de La Défense (nettoyage, contrôle)',
+            'Renfort de l\'équipe Weenat pour finalisation d\'une nouvelle version (dont DevOps)'
           ],
           techs: [
             'Python : Django, Flask',
@@ -127,12 +143,14 @@ export default {
           tags: ['FullStack', 'Entrepreneuriat']
         },
         { date: '2011-2013',
-          company: 'Optimor Labs (Oxford)',
+          company: 'Optimor Labs (Oxford - Angleterre)',
           title: 'Ingénieur backend',
           shortContent: 'Développement de solutions d\'analyse de factures téléphoniques (scraping, Big data)',
           companyDetails: 'Analyse en ligne des factures téléphoniques, et application de l\'usage aux offres du marché',
           roles: [
             'Développeur Backend',
+            'Web scraping',
+            'Monitoring',
             'Big data (réalisation d\'analyses statistiques)'
           ],
           techs: [
@@ -155,7 +173,7 @@ export default {
             'Scrum Master'
           ],
           techs: [
-            'Python : numpy, matplotlib',
+            'Python : numpy, matplotlib, wxPython',
             'C++ : algorithme de data mining',
             'Système : Windows'
           ],
@@ -170,6 +188,7 @@ export default {
           shortContent: 'Premier "employé" de Critéo, les tous premiers jours d\'une grande entreprise française !',
           companyDetails: 'Expert du reciblage publicitaire',
           roles: [
+            'Stagiaire',
             'Premier "employé" de Critéo, les tous premiers jours !',
             'Développement de la première maquette produit (PHP)'
           ],

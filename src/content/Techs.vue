@@ -3,6 +3,7 @@
     <v-row
       id="tech-filters"
       align="start"
+      class="d-print-none"
     >
       <v-col
         id="tech-type-select-col"
@@ -182,7 +183,7 @@ export default {
             'Administration : utilisateurs, SSH, sudoers',
             'Gestion de paquets. Installations / Configurations.',
             'cron, systemd, rotation de logs',
-            'Distris : Debian, Ubuntu. Egalement : Alpine'
+            'Distribs : Debian, Ubuntu. Egalement : Alpine'
           ]
         },
         {

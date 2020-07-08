@@ -26,7 +26,8 @@
 
             <h3>Une entreprise ouverte au télé-travail</h3>
 
-            Je pratique le télé-travail complet depuis 7 ans. J'y suis donc parfaitement familiarisé, et ma personnalité s'y prête bien. Mon idéal serait du télétravail à 50%, pour un meilleur équilibre de vie. A adapter selon la nature du poste (le management ne s'y prêtant pas forcément bien).
+            Je pratique le télé-travail complet depuis 7 ans. J'y suis donc parfaitement familiarisé, et ma personnalité s'y prête bien.<br/>
+            Je considère que c'est du gagnant-gagnant : moins de fatigue, moins de temps dans les transports, une meilleure productivité. Mon idéal serait du télétravail à 50%, pour un meilleur équilibre de vie. Mais je reste pragmatique, sachant que certaines situations ne le permettent pas.
           </div>
         </template>
       </content-section>
@@ -78,7 +79,7 @@
 
 
       <content-section
-        id="skills-list"
+        id="experience-list"
         title="Expérience"
         mono-slot
       >

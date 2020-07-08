@@ -13,7 +13,7 @@
           <v-switch
             v-model="detailed"
             dense
-            class="title-switch d-none d-sm-flex"
+            class="title-switch d-none d-sm-flex d-print-none"
             :label="detailed ? 'Version longue' : 'Version courte'"
           />
         </div>
@@ -21,7 +21,7 @@
       <v-switch
         v-model="detailed"
         dense
-        class="title-switch title-switch-xs d-sm-none"
+        class="title-switch title-switch-xs d-sm-none d-print-none"
         :label="detailed ? 'Version longue' : 'Version courte'"
       />
       <v-spacer />

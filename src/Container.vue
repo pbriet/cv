@@ -1,5 +1,8 @@
 <template>
   <v-app id="dark-template">
+    <div class="d-none d-print-block" id="print-header">
+      Retrouvez ce CV sous format interactif : <a href="https://pbriet.github.io" target="_blank">https://pbriet.github.io</a>
+    </div>
     <v-fade-transition
       mode="out-in"
       type="animation"
@@ -14,17 +17,17 @@
             justify-center
           >
             <v-flex
-              md10
+              lg10
               sm12
             >
               <v-layout wrap>
                 <v-flex
-                  md4
+                  sm4
                 >
                   <sidebar-container class="fill-height" />
                 </v-flex>
                 <v-flex
-                  md8
+                  sm8
                 >
                   <content-container class="fill-height" />
                 </v-flex>
@@ -63,4 +66,15 @@ export default {
 body, .v-card__subtitle, .v-card__text
     font-size: 0.95rem
     line-height: 1.4rem
+
+@media print
+  @page
+    size: 420mm 594mm
+    margin: 0mm
+
+#print-header
+  padding: 30px 0px 10px 0px
+  text-align: center
+  font-size: 22px
+
 </style>
