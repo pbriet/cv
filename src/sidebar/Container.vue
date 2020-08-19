@@ -11,7 +11,7 @@
           Pascal Briet
         </h1>
         <span>
-          Ingénieur web en quête de challenge
+          {{ trans('SUBTITLE') }}
         </span>
       </div>
 
@@ -24,42 +24,43 @@
 
       <div class="mb-4">
         <div class="title mb-3">
-          Profil
+          {{ trans('PROFILE_TITLE') }}
         </div>
-        <sidebar-skills/>
+        <sidebar-skills />
       </div>
 
       <div class="mb-4">
         <div class="title mb-3">
-          Points clés
+          {{ trans('KEYPOINT_TITLE') }}
         </div>
         <ul>
-          <li>Développeur <b>full-stack</b></li>
-          <li>Architecte logiciel</li>
-          <li>13 ans d'expérience</li>
-          <li>Esprit d'entrepreneur</li>
-          <li>Pragmatique</li>
-          <li>Rigoureux et efficace</li>
+          <li v-html="trans('FULLSTACK_DEVELOPER')"></li>
+          <li>{{ trans('SOFTWARE_ARCHITECT') }}</li>
+          <li>{{ trans('EXPERIENCE') }}</li>
+          <li>{{ trans('ENTREPRENEUR') }}</li>
+          <li>{{ trans('PRAGMATIC') }}</li>
+          <li>{{ trans('RIGOROUS') }}</li>
+          <li>{{ trans('SELFTRAINING') }}</li>
         </ul>
       </div>
 
 
       <div class="mb-4">
         <div class="title mb-3">
-          Loisirs
+          {{ trans('HOBBIES') }}
         </div>
         <v-row>
           <v-col cols="6">
             <div class="leasure">
-              <v-icon>mdi-feather</v-icon> Ecriture
+              <v-icon>mdi-feather</v-icon> {{ trans('WRITING') }}
             </div>
             <div class="leasure">
-              <v-icon>mdi-earth</v-icon> Géopolitique
+              <v-icon>mdi-earth</v-icon> {{ trans('GEOPOLITICS') }}
             </div>
           </v-col>
           <v-col cols="6">
             <div class="leasure">
-              <v-icon>mdi-tennis</v-icon> Badminton
+              <v-icon>mdi-tennis</v-icon> {{ trans('BADMINTON') }}
             </div>
           </v-col>
         </v-row>
@@ -67,12 +68,11 @@
 
       <div class="mb-4">
         <div class="title mb-3">
-          Langues
+          {{ trans('LANGUAGES') }}
         </div>
-        Français : natif<br/>
-        Anglais : professionnel
+        {{ trans('FRENCH') }}<br>
+        {{ trans('ENGLISH') }}
       </div>
-
     </v-card-text>
   </v-card>
 </template>
@@ -81,9 +81,11 @@
 import Avatar from '@/sidebar/Avatar'
 import SidebarInfos from '@/sidebar/Infos'
 import SidebarSkills from '@/sidebar/Skills'
+import I18nMixin from '@/i18nmixin'
 
 export default {
-  name      : 'Sidebar',
+  name: 'Sidebar',
+  mixins: [I18nMixin],
   components: { SidebarInfos, SidebarSkills, Avatar },
   data () {
     return {
@@ -92,25 +94,109 @@ export default {
           title: 'INFO',
           items: [
             {
-              name: 'Annecy (Haute-savoie)',
-              icon: 'mdi-map-marker',
-              text: 'A partir de mi-Août 2020'
+              name: {
+                'FR': 'Annecy (Haute-savoie)',
+                'EN': 'Annecy (France, Haute-savoie)'
+              },
+              text: {
+                'FR': 'Permis A',
+                'EN': 'Driving Licence'
+              },
+              icon: 'mdi-map-marker'
             },
             {
-              name: '13 janvier 1985',
+              name: {
+                'FR': '13 janvier 1985',
+                'EN': 'Jan 13th, 1985'
+              },
               icon: 'mdi-cake-variant',
-              text: '35 ans - Français'
+              text: {
+                'FR': '35 ans - Français',
+                'EN': '35 years old - French'
+              }
             },
             {
-              name: 'Disponible Octobre 2020',
-              icon: 'mdi-calendar',
-              text: 'Entretiens à partir de mi-Août'
+              name: {
+                'FR': 'Disponible Octobre 2020',
+                'EN': 'Available starting October 2020'
+              },
+              icon: 'mdi-calendar'
             }
           ],
         }
       },
+      translations: {
+        SUBTITLE: {
+          'FR': 'Ingénieur web en quête de challenge',
+          'EN': 'Full-stack web engineer, looking for challenge'
+        },
+        KEYPOINT_TITLE: {
+          'FR': 'Points clés',
+          'EN': 'Key points'
+        },
+        PROFILE_TITLE: {
+          'FR': 'Profil',
+          'EN': 'Main skills'
+        },
+        FULLSTACK_DEVELOPER: {
+          'FR': 'Développeur <b>full-stack</b>',
+          'EN': '<b>Full stack</b> developer'
+        },
+        SOFTWARE_ARCHITECT: {
+          'FR': 'Architecte logiciel',
+          'EN': 'Software architect'
+        },
+        EXPERIENCE: {
+          'FR': '13 ans d\'expérience',
+          'EN': '13 years experience'
+        },
+        ENTREPRENEUR: {
+          'FR': 'Esprit d\'entrepreneur',
+          'EN': 'Entrepreneurship'
+        },
+        PRAGMATIC: {
+          'FR': 'Pragmatique',
+          'EN': 'Pragmatic'
+        },
+        RIGOROUS: {
+          'FR': 'Rigoureux et efficace',
+          'EN': 'Efficient and meticulous'
+        },
+        SELFTRAINING: {
+          'FR': 'Auto-apprentissage',
+          'EN': 'Self-learning'
+        },
+        HOBBIES: {
+          'FR': 'Auto-apprentissage',
+          'EN': 'Self-learning'
+        },
+        WRITING: {
+          'FR': 'Loisirs',
+          'EN': 'Hobbies'
+        },
+        BADMINTON: {
+          'FR': 'Badminton',
+          'EN': 'Badminton'
+        },
+        GEOPOLITICS: {
+          'FR': 'Géopolitique',
+          'EN': 'Geopolitics'
+        },
+        LANGUAGES: {
+          'FR': 'Langues',
+          'EN': 'Spoken languages'
+        },
+        FRENCH: {
+          'FR': 'Français : natif',
+          'EN': 'French: native'
+        },
+        ENGLISH: {
+          'FR': 'Anglais : professionnel (1 an à Oxford)',
+          'EN': 'English: professional (1 year spent in Oxford)'
+        }
+      }
     }
-  },
+  }
 }
 </script>
 

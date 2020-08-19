@@ -13,17 +13,23 @@
       :xs12="!hasIcon"
     >
       <div>
-        {{ item.name }}
+        {{ transDict(item.name) }}
       </div>
       <p class="grey--text">
-        {{ item.text }}
+        <span v-if="item.text">
+          {{ transDict(item.text )}}
+        </span>
       </p>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+
+import I18nMixin from '@/i18nmixin'
+
 export default {
+  mixins: [I18nMixin],
   name    : 'SidebarInfoItem',
   props   : { item: { type: Object, default: () => {} } },
   computed: {

@@ -11,30 +11,49 @@
       <v-avatar left>
         <v-icon>{{ item.icon }}</v-icon>
       </v-avatar>
-      {{ item.text }}
+      {{ transDict(item.text) }}
     </v-chip>
   </div>
 </template>
 
 <script>
+  import I18nMixin from '@/i18nmixin'
+
   export default {
+    mixins: [I18nMixin],
     data () {
       return {
         items: [
           {
             icon: 'mdi-language-python',
-            text: 'Développeur backend'
+            text: {
+              'FR': 'Développeur backend',
+              'EN': 'Backend developer'
+            }
           },
           {
             icon: 'mdi-cogs',
-            text: 'Architecte web'
+            text: {
+              'FR': 'Architecte web',
+              'EN': 'Web architect'
+            }
           },
           {
             icon: 'mdi-docker',
-            text: 'Devops'
+            text: {
+              'FR': 'Devops',
+              'EN': 'Devops'
+            }
           },
         ]
       }
     }
   }
 </script>
+
+
+      translations: {
+        SUBTITLE: {
+          'FR': 'Ingénieur web en quête de challenge',
+          'EN': 'Full-stack web engineer, looking for challenge'
+        },

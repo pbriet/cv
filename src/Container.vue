@@ -1,13 +1,31 @@
 <template>
   <v-app id="dark-template">
-    <div class="d-none d-print-block" id="print-header">
-      Retrouvez ce CV sous format interactif : <a href="https://pbriet.github.io" target="_blank">https://pbriet.github.io</a>
+    <div
+      id="print-header"
+      class="d-none d-print-block"
+    >
+      Retrouvez ce CV sous format interactif :
+      <a
+        href="https://pbriet.github.io"
+        target="_blank"
+      >
+        https://pbriet.github.io
+      </a>
+    </div>
+    <div id="flags">
+      <a
+        v-for="lang in langs"
+        :key="lang"
+        :href="lang_href(lang)"
+      >
+        {{ lang }}
+      </a>
     </div>
     <v-fade-transition
       mode="out-in"
       type="animation"
     >
-      <v-content>
+      <v-main>
         <v-container
           fluid
           fill-height
@@ -35,7 +53,7 @@
             </v-flex>
           </v-layout>
         </v-container>
-      </v-content>
+      </v-main>
     </v-fade-transition>
   </v-app>
 </template>
@@ -50,6 +68,16 @@ export default {
     ContentContainer,
     SidebarContainer,
   },
+  data () {
+    return {
+      langs: ['FR', 'EN']
+    }
+  },
+  methods: {
+    lang_href (lang) {
+      return '?lang=' + lang
+    }
+  }
 }
 </script>
 
@@ -76,5 +104,15 @@ body, .v-card__subtitle, .v-card__text
   padding: 30px 0px 10px 0px
   text-align: center
   font-size: 22px
+
+#flags
+  text-align: center
+  a:not(:first-child)
+    margin-left: 10px
+
+  a.active
+    text-decoration: none
+    color: black
+    font-weight: bold
 
 </style>
