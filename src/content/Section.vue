@@ -14,7 +14,7 @@
             v-model="detailed"
             dense
             class="title-switch d-none d-sm-flex d-print-none"
-            :label="detailed ? 'Version longue' : 'Version courte'"
+            :label="detailed ? trans('LONG_VERSION') : trans('SHORT_VERSION')"
           />
         </div>
       </div>
@@ -22,7 +22,7 @@
         v-model="detailed"
         dense
         class="title-switch title-switch-xs d-sm-none d-print-none"
-        :label="detailed ? 'Version longue' : 'Version courte'"
+        :label="detailed ? trans('LONG_VERSION') : trans('SHORT_VERSION')"
       />
       <v-spacer />
       <slot name="actions" />
@@ -48,8 +48,11 @@
 </template>
 
 <script>
+import I18nMixin from '@/i18nmixin'
+
 export default {
   name      : 'ContentSection',
+  mixins: [I18nMixin],
   components: { },
   props     : {
     title: { type: String, default: '' },
@@ -57,7 +60,17 @@ export default {
   },
   data () {
     return {
-      detailed: false
+      detailed: false,
+      translations: {
+        LONG_VERSION: {
+          'FR': 'Version longue',
+          'EN': 'Long version'
+        },
+        SHORT_VERSION: {
+          'FR': 'Version courte',
+          'EN': 'Short version'
+        }
+      }
     }
   }
 }

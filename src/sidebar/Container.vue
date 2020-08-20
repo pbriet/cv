@@ -167,12 +167,12 @@ export default {
           'EN': 'Self-learning'
         },
         HOBBIES: {
-          'FR': 'Auto-apprentissage',
-          'EN': 'Self-learning'
-        },
-        WRITING: {
           'FR': 'Loisirs',
           'EN': 'Hobbies'
+        },
+        WRITING: {
+          'FR': 'Ecriture',
+          'EN': 'Writing'
         },
         BADMINTON: {
           'FR': 'Badminton',

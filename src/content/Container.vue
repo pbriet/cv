@@ -18,7 +18,7 @@
 
       <content-section
         id="skills-list"
-        title="Compétences techniques"
+        :title="trans('TECHNICAL_SKILLS')"
         mono-slot
       >
         <template v-slot:default="slotProps">
@@ -41,7 +41,7 @@
 
       <content-section
         id="experience-list"
-        title="Expérience"
+        :title="trans('EXPERIENCE')"
         mono-slot
       >
         <template v-slot:default="slotProps">
@@ -66,6 +66,14 @@ export default {
   data () {
     return {
       'translations': {
+        TECHNICAL_SKILLS: {
+          'FR': 'Compétences techniques',
+          'EN': 'Technical skills',
+        },
+        EXPERIENCE: {
+          'FR': 'Expérience',
+          'EN': 'Experience',
+        },
         LOOKING_FOR: {
           'FR': 'Ce que je cherche',
           'EN': 'What I\'m looking for'
@@ -74,7 +82,10 @@ export default {
           'FR': `
             Un nouveau défi à relever, pour évoluer techniquement et humainement.<br>
             J'envisage notamment d'évoluer dans les domaines suivants : <b>Devops</b>, IA, management, ...`,
-          'EN': ``
+          'EN': `
+            A new challenge. I'd like to learn new technical and human skills.<br>
+            I'm especially attracted by the following : <b>Devops</b>, AI, management, ...
+          `
         },
         LOOKING_FOR_LONG: {
           'FR': `
@@ -99,16 +110,39 @@ export default {
             Je considère la pratique du télétravail comme étant gagnant-gagnant : moins de fatigue, moins de temps dans les transports, une meilleure productivité.<br>
             Si j'apprécie l'ambiance de bureau et les interactions sociales avec les collègues, pouvoir se déplacer moins de 5 jours par semaine est un gros plus.
           `,
-          'EN': ``
+          'EN': `
+
+            <h3>An intellectual challenge</h3>
+
+            My main motives are to learn new things, to resolve complex problems with simple and elegant solutions. It brings me high satisfaction.<br><br>
+
+            At this point of my career, I have a pretty good knowledge in 2 areas: frontend and backend development (especially the last one). I'd like to develop a new domain of expertise : DevOPS, artificial intelligence, or any intersting topic that you may suggest.
+
+            <h3>A new working environment</h3>
+
+            Until this day, I've always worked in small businesses (1 to 11 employees). I'm curious to discover medium/large enterprises.<br>
+
+            But I'm still open to opportunities in startups, or as a freelance.
+
+            <h3>Working with top-level engineers</h3>
+
+            I wish to join a team with highly-skilled colleagues, involved and tolerants.
+
+            <h3>A remote-friendly employer</h3>
+
+            I think that working remotely is a win-win: less energy wasted in transports, better productivity.<br>
+            I really do like spending time with my teammates, but I will value your offer if you are open to a few days of remote work.
+          `
         },
         HUMAN_SKILLS: {
           'FR': 'Qualités humaines',
-          'EN': 'People skills'
+          'EN': 'Personal skills'
         },
         HUMAN_SKILLS_SHORT: {
-          'FR': ``,
-          'EN': `Exigeant envers moi-même, investi et pragmatique. Je ne sais pas faire les choses à moitié.<br>
-             Moteur et force de proposition, je m'épanouis dans un environnement peu conflictuel et bienveillant.`
+          'FR': `Exigeant envers moi-même, investi et pragmatique. Je ne sais pas faire les choses à moitié.<br>
+             Moteur et force de proposition, je m'épanouis dans un environnement peu conflictuel et bienveillant.`,
+          'EN': `Setting myself high-standards, involved and pragmatic. My only way to work is intensely.<br>
+             Proactive, with leadership skills, I'm at my best in a peaceful and harmonious workplace.`
         },
         HUMAN_SKILLS_LONG: {
           'FR': `<h3>Entrepreneur dans l'âme</h3>
@@ -140,7 +174,30 @@ export default {
 
             Bien que d'un naturel plutôt discret, j'ai toujours naturellement pris le lead des équipes dans lesquelles j'ai été (et ce, même en télétravail). Je sais organiser, accompagner, écouter, impulser de nouvelles pratiques. J'ai une forte préférence pour les organisations peu hiérarchiques.
           `,
-          'EN': ``
+          'EN': `<h3>An entrepreneurial spirit</h3>
+
+            Having co-created 2 businesses (twice my initiative), what I see in a company is much more than the technical aspects. What I care about is customer satisfaction and cost-effectiveness. I have a good culture in sales and marketing.
+
+            <h3>Meticulous and efficient</h3>
+
+            I like things to be pretty and clean. That's the only way a project can work in the long-terme.
+
+            <br><br>
+
+            Still, I'm not a perfectionist but a pragmatic developer. If the deadline is short, I won't waste time on details.<br>
+            When I commit myself to a deadline, I always meet the expectations (which is quite rare in the developer world!)
+
+            <h3>Self-learner</h3>
+
+            I'm not afraid to learn new technologies/methodologies. On the contrary, I really enjoy it.<br>
+
+            I have self-learned: Django, VueJS, Ansible, Kubernetes. Once I'd mastered the technologies, I taught my co-workers.<br><br>
+
+            I'm fond of some technologies that I master (Python, Docker, ...), but I'm open to discover other environments (Java, NodeJS, ...)
+
+            <h3>Horizontal leadership</h3>
+
+            With a rather calm personality, I'm clearly not a chef. But I've always taken the lead in the teams I worked. I'm pretty good at organizing, orchestrating, communicating and introducing change.`
         }
 
       }

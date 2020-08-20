@@ -13,7 +13,7 @@
       >
         <v-select
           v-model="techTypes"
-          :items="techTypesChoices"
+          :items="trans('TECH_TYPE_CHOICES')"
           item-text="label"
           item-value="value"
           label="Type"
@@ -24,10 +24,10 @@
           v-model="levels"
           multiple
           chips
-          :items="levelChoices"
+          :items="trans('LEVEL_CHOICES')"
           item-text="label"
           item-value="value"
-          label="Niveau"
+          :label="trans('LEVEL')"
         />
       </v-col>
     </v-row>
@@ -74,12 +74,12 @@
             <v-card-text>
               <div v-if="tech.experience">
                 <div class="headline">
-                  {{ tech.experience }} années
+                  {{ tech.experience }} {{ trans('YEARS') }}
                 </div>
               </div>
               <div v-if="tech.details" class="tech-details">
                 <ul>
-                  <li v-for="detail in tech.details" :key="detail">
+                  <li v-for="detail in transDict(tech.details)" :key="detail">
                     {{ detail }}
                   </li>
                 </ul>
@@ -94,24 +94,52 @@
 
 
 <script>
+import I18nMixin from '@/i18nmixin'
+
 export default {
   name: 'Techs',
+  mixins: [I18nMixin],
   props: ['detailed'],
   data () {
     return {
+      translations: {
+        LEVEL: {
+          'FR': 'Niveau',
+          'EN': 'Level'
+        },
+        YEARS: {
+          'FR': 'années',
+          'EN': 'years'
+        },
+        TECH_TYPE_CHOICES: {
+          'FR': [
+            { value: 'all', label: 'Toutes' },
+            { value: 'back', label: 'Backend' },
+            { value: 'front', label: 'Frontend' },
+            { value: 'devops', label: 'DevOps / Système' }
+          ],
+          'EN': [
+            { value: 'all', label: 'All' },
+            { value: 'back', label: 'Backend' },
+            { value: 'front', label: 'Frontend' },
+            { value: 'devops', label: 'DevOps / Sysadmin' }
+          ],
+        },
+        LEVEL_CHOICES: {
+          'FR': [
+            { value: 'expert', label: 'Expert' },
+            { value: 'high', label: 'Avancé' },
+            { value: 'medium', label: 'Moyen' },
+          ],
+          'EN': [
+            { value: 'expert', label: 'Expert' },
+            { value: 'high', label: 'Proficient' },
+            { value: 'medium', label: 'Competent' },
+          ]
+        }
+      },
       techTypes: 'all',
-      techTypesChoices: [
-        { value: 'all', label: 'Toutes' },
-        { value: 'back', label: 'Backend' },
-        { value: 'front', label: 'Frontend' },
-        { value: 'devops', label: 'DevOps / Système' }
-      ],
       levels: ['expert', 'high'],
-      levelChoices : [
-        { value: 'expert', label: 'Expert' },
-        { value: 'high', label: 'Avancé' },
-        { value: 'medium', label: 'Moyen' },
-      ],
       techs: [
         {
           categories: ['back'],
@@ -119,12 +147,20 @@ export default {
           name: 'Python',
           level: 'expert',
           experience: 13,
-          details: [
-            '100% orienté objet',
-            'Tout l\'univers du web',
-            'Bibliothèques scientifiques (numpy, matplotlib, ...)',
-            'Bonne maîtrise des mécanismes internes'
-          ]
+          details: {
+            'FR': [
+              '100% orienté objet',
+              'Tout l\'univers du web',
+              'Bibliothèques scientifiques (numpy, matplotlib, ...)',
+              'Bonne maîtrise des mécanismes internes'
+            ],
+            'EN': [
+              '100% object-oriented',
+              'Web frameworks and libraries',
+              'Scientific libraries (numpy, matplotlib, ...)',
+              'Good knowledge of internals'
+            ]
+          }
         },
         {
           categories: ['back'],
@@ -132,12 +168,20 @@ export default {
           name: 'Django',
           level: 'expert',
           experience: 7,
-          details: [
-            'API REST',
-            'ORM, MongoEngine, migrations, optimisation',
-            'Middlewares, widgets, templatetags, cache, ...',
-            'Celery'
-          ]
+          details: {
+            'FR': [
+              'API REST',
+              'ORM, MongoEngine, migrations, optimisation',
+              'Middlewares, widgets, templatetags, cache, ...',
+              'Celery'
+            ],
+            'EN': [
+              'REST API',
+              'ORM, MongoEngine, migrations, optimization',
+              'Middlewares, widgets, templatetags, cache, ...',
+              'Celery'
+            ]
+          }
         },
         {
           categories: ['devops'],
@@ -145,11 +189,18 @@ export default {
           name: 'Docker',
           level: 'high',
           experience: 4,
-          details: [
-            'Projets multi-containers avec Docker-compose',
-            'Volumes, réseaux',
-            'Multi-stage builds, optimisations, ...'
-          ]
+          details: {
+            'FR': [
+              'Projets multi-containers avec Docker-compose',
+              'Volumes, réseaux',
+              'Multi-stage builds, optimisations, ...'
+            ],
+            'EN': [
+              'Container orchestration with Docker-compose',
+              'Volumes, networks',
+              'Multi-stage builds, optimizations, ...'
+            ]
+          }
         },
         {
           categories: ['front'],
@@ -157,10 +208,16 @@ export default {
           name: 'VueJS',
           level: 'high',
           experience: 3,
-          details: [
-            'Développement de gros projets SPA',
-            'VueX, Vuetify, Vue-router'
-          ]
+          details: {
+            'FR': [
+              'Développement de gros projets SPA',
+              'VueX, Vuetify, Vue-router'
+            ],
+            'EN':  [
+              'Large SPA projects',
+              'VueX, Vuetify, Vue-router'
+            ]
+          }
         },
         {
           categories: ['devops'],
@@ -168,10 +225,16 @@ export default {
           name: 'Ansible',
           level: 'high',
           experience: 7,
-          details: [
-            'Déploiement de projets iso dev/staging/prod',
-            'Rôles, templates, handlers'
-          ]
+          details: {
+            'FR': [
+              'Déploiement de projets iso dev/staging/prod',
+              'Rôles, templates, handlers'
+            ],
+            'EN': [
+              'Multi-environment deployments (dev/staging/prod)',
+              'Roles, templates, handlers'
+            ]
+          }
         },
         {
           categories: ['devops'],
@@ -179,12 +242,20 @@ export default {
           name: 'Linux',
           level: 'high',
           experience: 9,
-          details: [
-            'Administration : utilisateurs, SSH, sudoers',
-            'Gestion de paquets. Installations / Configurations.',
-            'cron, systemd, rotation de logs',
-            'Distribs : Debian, Ubuntu. Egalement : Alpine'
-          ]
+          details: {
+            'FR': [
+              'Administration : utilisateurs, SSH, sudoers',
+              'Gestion de paquets. Installations / Configurations.',
+              'cron, systemd, rotation de logs',
+              'Distribs : Debian, Ubuntu. Egalement : Alpine'
+            ],
+            'EN': [
+              'Users management: SSH, sudoers',
+              'Package management',
+              'cron, systemd, logs analysis',
+              'Debian, Ubuntu. A little bit of Alpine'
+            ]
+          }
         },
         {
           categories: ['front'],
@@ -192,10 +263,16 @@ export default {
           name: 'AngularJS',
           level: 'high',
           experience: 4,
-          details: [
-            'Gros projet SPA',
-            'Problématiques de SEO (génération statique)'
-          ]
+          details: {
+            'FR': [
+              'Gros projet SPA',
+              'Problématiques de SEO (génération statique)'
+            ],
+            'EN': [
+              'Large SPA project',
+              'Handling of SEO issues (static serving)'
+            ]
+          }
         },
         {
           categories: ['devops'],
@@ -203,13 +280,22 @@ export default {
           name: 'Kubernetes',
           level: 'high',
           experience: 2,
-          details: [
-            'Configuration from scratch sur 2 projets',
-            'Google Cloud, Amazon EKS (kube2iam, ALB, external-secrets)',
-            'Skaffold, Helm, Minikube',
-            'Configs, Secrets, Jobs, Deployment, Ingress, Services',
-            'Ligne de commande'
-          ]
+          details: {
+            'FR': [
+              'Configuration from scratch sur 2 projets',
+              'Google Cloud, Amazon EKS (kube2iam, ALB, external-secrets)',
+              'Skaffold, Helm, Minikube',
+              'Configs, Secrets, Jobs, Deployment, Ingress, Services',
+              'Ligne de commande'
+            ],
+            'EN': [
+              'Configuring from scratch : 2 projects',
+              'Google Cloud, Amazon EKS (kube2iam, ALB, external-secrets)',
+              'Skaffold, Helm, Minikube',
+              'Configs, Secrets, Jobs, Deployment, Ingress, Services',
+              'Command line tool'
+            ]
+          }
         },
         {
           categories: ['devops'],
@@ -217,11 +303,18 @@ export default {
           name: 'GIT',
           level: 'high',
           experience: 9,
-          details: [
-            'Utilisation quotidienne',
-            'clone, checkout, commit, pull, push, logs, ...',
-            'Rarement : cherry-pick, rebase'
-          ]
+          details: {
+            'FR': [
+              'Utilisation quotidienne',
+              'clone, checkout, commit, pull, push, logs, ...',
+              'Rarement : cherry-pick, rebase'
+            ],
+            'EN': [
+              'Daily use',
+              'clone, checkout, commit, pull, push, logs, ...',
+              'Rarely: cherry-pick, rebase'
+            ]
+          }
         },
         {
           categories: ['front'],
@@ -229,10 +322,16 @@ export default {
           name: 'Webpack',
           level: 'medium',
           experience: 2,
-          details: [
-            'Configuration pour VueJS (via vue-cli)',
-            'Quelques customisations (configureWebpack, chainWebpack, ...)'
-          ]
+          details: {
+            'FR': [
+              'Configuration pour VueJS (via vue-cli)',
+              'Quelques customisations (configureWebpack, chainWebpack, ...)'
+            ],
+            'EN': [
+              'VueJS configurations (vue-cli)',
+              'Customizations (configureWebpack, chainWebpack, ...)'
+            ]
+          }
         },
         {
           categories: ['back'],
@@ -240,12 +339,20 @@ export default {
           name: 'SQL',
           level: 'high',
           experience: 9,
-          details: [
-            'Requêtage (direct ou via ORM)',
-            'PostgreSQL, MySQL',
-            'Administration : uniquement les bases',
-            'Optimisation de requêtes'
-          ]
+          details: {
+            'FR': [
+              'Requêtage (direct ou via ORM)',
+              'PostgreSQL, MySQL',
+              'Administration : uniquement les bases',
+              'Optimisation de requêtes'
+            ],
+            'EN': [
+              'Queries (raw or through ORM)',
+              'PostgreSQL, MySQL',
+              'Basic administration knowledge',
+              'Query optimizations'
+            ]
+          }
         },
         {
           categories: ['back'],
@@ -253,10 +360,16 @@ export default {
           name: 'MongoDB',
           level: 'medium',
           experience: 9,
-          details: [
-            'Requêtage (direct ou via ORM)',
-            'MongoAtlas'
-          ]
+          details: {
+            'FR': [
+              'Requêtage (direct ou via ORM)',
+              'MongoAtlas'
+            ],
+            'EN': [
+              'Queries (raw or through ORM)',
+              'MongoAtlas'
+            ]
+          }
         },
         {
           categories: ['back'],
@@ -264,10 +377,16 @@ export default {
           name: 'C++',
           level: 'high',
           experience: 8,
-          details: [
-            'Utilisation avancée (méthodes templatées)',
-            'Peu manipulé ces dernières années'
-          ]
+          details: {
+            'FR': [
+              'Utilisation avancée (méthodes templatées)',
+              'Peu manipulé ces dernières années'
+            ],
+            'EN': [
+              'Advanced usage (templated methods)',
+              'No project in recent years'
+            ]
+          }
         },
         {
           categories: ['front'],
@@ -282,10 +401,16 @@ export default {
           name: 'Javascript',
           level: 'high',
           experience: 10,
-          details: [
-            'Longue expérience (jQuery, AngularJS, VueJS, ES6)',
-            'Uniquement côté client (pas de NodeJS)'
-          ]
+          details: {
+            'FR': [
+              'Longue expérience (jQuery, AngularJS, VueJS, ES6)',
+              'Uniquement côté client (pas de NodeJS)'
+            ],
+            'EN': [
+              'Longtime experience (jQuery, AngularJS, VueJS, ES6)',
+              'Only client-side (no NodeJS)'
+            ]
+          }
         },
         {
           categories: ['back'],
@@ -293,30 +418,34 @@ export default {
           name: 'Flask',
           level: 'medium',
           experience: 3,
-          details: [
-            'API REST',
-            'Flask-cors, Flask-jwt, Flask-socketio'
-          ]
+          details: {
+            'FR': [
+              'API REST',
+              'Flask-cors, Flask-jwt, Flask-socketio'
+            ],
+            'EN': [
+              'API REST',
+              'Flask-cors, Flask-jwt, Flask-socketio'
+            ]
+          }
         },
         {
           categories: ['back'],
           icon: 'mdi-cogs',
           name: 'Algorithmie',
           level: 'high',
-          details: [
-            'Spécialisation master',
-            'Datamining',
-            'Optimisation avec heuristique'
-          ]
+          details: {
+            'FR': [
+              'Spécialisation master',
+              'Datamining',
+              'Optimisation avec heuristique'
+            ],
+            'EN': [
+              'Datamining',
+              'Optimization with meta-heuristics'
+            ]
+          }
         },
-      ],
-      experiences: [
-        { date: '2016-2020',
-          company: 'Les Octets Libres',
-          content: 'Yay' },
-        { date: '2013-2015',
-          company: 'Cook&Be',
-          content: 'Yay' },
       ]
     }
   },
