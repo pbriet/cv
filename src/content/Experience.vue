@@ -8,6 +8,7 @@
         v-for="experience in experiences"
         :key="transDict(experience.title)"
         color="secondary darken-4"
+        style="page-break-inside: avoid !important"
         :small="true"
       >
         <v-card class="elevation-2">
@@ -112,7 +113,7 @@ export default {
           },
           companyDetails: {
             'FR': 'Petite ESN (4 salariés) en coopérative. Développement de solutions à haute valeur ajoutée pour les entreprises. Edition d\'une solution SAAS : SLEAD',
-            'EN': 'Small business (4 employees). High added value custom solutions for customers. Also: development of a SAAS service.'
+            'EN': 'Small business (4 employees). Designing custom solutions for businesses (automation, APIs, backoffice, connections with CRM/ERP). Also: editor of a SAAS solution named SLEAD.'
           },
           roles: {
             'FR': [
@@ -145,8 +146,8 @@ export default {
             'EN': [
               'Automated tool for sales people to build custom quotes (connected with Salesforce)',
               'SAAS solution to build custom public quotes and gather some leads (https://www.slead.co)',
-              'Backoffice of a website that connects together vets and customers (through phone and webconference)',
-              'Solution for supervising maintenance of buildings (French secretary of Defense)',
+              'Backoffice of a website that connects together vets and customers (through phone and videoconference)',
+              'Solution for supervising the maintenance of buildings (French secretary of Defense)',
               'Joining the Weenat team to finalize a relase (mostly DevOps)'
             ]
           },
@@ -180,11 +181,11 @@ export default {
           title: 'Président co-fondateur',
           shortContent: {
             'FR': 'Création d\'une startup tech : du développement de la solution à la vente et au financement',
-            'EN': 'Création d\'une startup tech : du développement de la solution à la vente et au financement'
+            'EN': 'Building a tech startup: from development to sales&marketing'
           },
           companyDetails: {
-            'FR': 'Planificateur de repas en ligne ultra-personnalisé',
-            'EN': 'Planificateur de repas en ligne ultra-personnalisé'
+            'FR': 'Startup éditrice d\'un planificateur de repas en ligne ultra-personnalisé. Les utilisateurs peuvent saisir leurs goûts, contraintes, objectifs, et des plannings de repas leur sont proposés sur mesure.',
+            'EN': 'Startup: Higly-personnalized online meal planner. Users can define their tastes, personal constraints and targets. Cook&Be then generates custom meal plannings for the week from all these parameters.'
           },
           roles: {
             'FR': [
@@ -197,13 +198,12 @@ export default {
               'Pitchs et concours'
             ],
             'EN': [
-              'Chef d\'entreprise (création à mon initiative)',
-              'Business plan, prévisionnels',
-              'Recherche de financements',
-              'Juridique',
-              'Développeur FullStack',
-              'Marketing/commercial',
-              'Pitchs et concours'
+              'CEO',
+              'Business plan, forecast budget',
+              'Looking for fundings',
+              'FullStack developer',
+              'Marketing/sales',
+              'Pitching and participating to startups contests'
             ]
           },
           techs: {
@@ -215,11 +215,11 @@ export default {
               'Système : Linux'
             ],
             'EN': [
-              'Python : Django',
-              'C++ : Algorithme haute performance + librairie Boost',
-              'JS : AngularJS, Grunt',
-              'Devops : Ansible, Vagrant',
-              'Système : Linux'
+              'Python: Django',
+              'C++: Highly optimized genetic algorithm, Boost library',
+              'JS: AngularJS, Grunt',
+              'Devops: Ansible, Vagrant',
+              'Sysadmin: Linux'
             ]
           },
           links: [
@@ -227,7 +227,7 @@ export default {
           ],
           tags: {
             'FR': ['FullStack', 'Entrepreneuriat'],
-            'EN': ['FullStack', 'Entrepreneuriat']
+            'EN': ['FullStack', 'Entrepreneurship']
           }
         },
         { date: '2011-2013',
@@ -235,11 +235,11 @@ export default {
           title: 'Ingénieur backend',
           shortContent: {
             'FR': 'Développement de solutions d\'analyse de factures téléphoniques (scraping, Big data)',
-            'EN': 'Développement de solutions d\'analyse de factures téléphoniques (scraping, Big data)'
+            'EN': 'Development of a solution that scrapes mobile bills, and apply your usage to the others mobile offers in the market'
           },
           companyDetails: {
             'FR': 'Analyse en ligne des factures téléphoniques, et application de l\'usage aux offres du marché',
-            'EN': 'Analyse en ligne des factures téléphoniques, et application de l\'usage aux offres du marché'
+            'EN': 'Online analysis of mobile bills (with scraping) by applying your usage (voice, texts, data) to the mobile offers available in the market'
           },
           roles: {
             'FR': [
@@ -249,10 +249,10 @@ export default {
               'Big data (réalisation d\'analyses statistiques)'
             ],
             'EN': [
-              'Développeur Backend',
+              'Backend developer',
               'Web scraping',
               'Monitoring',
-              'Big data (réalisation d\'analyses statistiques)'
+              'Big data (looking for usage patterns, plotting)'
             ]
           },
           techs: {
@@ -263,8 +263,8 @@ export default {
             ],
             'EN': [
               'Python',
-              'Devops : Munin',
-              'Système : Linux/MacOS'
+              'Devops: Munin',
+              'Sysadmin: Linux/MacOS'
             ]
           },
           links: [
@@ -280,11 +280,11 @@ export default {
           title: 'Ingénieur logiciel',
           shortContent: {
             'FR': 'Développement d\'un logiciel Windows d\'analyse de données industrielles',
-            'EN': 'Développement d\'un logiciel Windows d\'analyse de données industrielles',
+            'EN': 'Development of a data analysis Windows software for the industry (understanding production defaults)',
           },
           companyDetails: {
             'FR': 'Editeur d\'une solution d\'analyse des défauts de production sur les chaînes de production industrielles',
-            'EN': 'Editeur d\'une solution d\'analyse des défauts de production sur les chaînes de production industrielles'
+            'EN': 'Editing a data analysis Windows software for the industry, that helps customers understanding their defaults in production lines.'
           },
           roles: {
             'FR': [
@@ -292,7 +292,7 @@ export default {
               'Scrum Master'
             ],
             'EN': [
-              'Développeur',
+              'Developer (Software, MVC)',
               'Scrum Master'
             ]
           },
@@ -303,9 +303,9 @@ export default {
               'Système : Windows'
             ],
             'EN': [
-              'Python : numpy, matplotlib, wxPython',
-              'C++ : algorithme de data mining',
-              'Système : Windows'
+              'Python: numpy, matplotlib, wxPython',
+              'C++: data mining algorithm',
+              'Windows'
             ]
           },
           links: [
@@ -316,7 +316,7 @@ export default {
           ],
           tags: {
             'FR': ['Logiciel Windows', 'Scrum'],
-            'EN': ['Logiciel Windows', 'Scrum'],
+            'EN': ['Windows software', 'Scrum'],
           }
         },
         { date: '2005',
@@ -324,11 +324,11 @@ export default {
           title: 'Stagiaire',
           shortContent: {
             'FR': 'Premier "employé" de Critéo, les tous premiers jours d\'une grande entreprise française !',
-            'EN': 'Premier "employé" de Critéo, les tous premiers jours d\'une grande entreprise française !'
+            'EN': 'First "employee". The very first days of a big European success-story!'
           },
           companyDetails: {
             'FR': 'Expert du reciblage publicitaire',
-            'EN': 'Expert du reciblage publicitaire',
+            'EN': 'Advertising platform (custom retargeting)',
           },
           roles: {
             'FR': [
@@ -337,9 +337,8 @@ export default {
               'Développement de la première maquette produit (PHP)'
             ],
             'EN': [
-              'Stagiaire',
-              'Premier "employé" de Critéo, les tous premiers jours !',
-              'Développement de la première maquette produit (PHP)'
+              'First "employee". The very first days of a big European success-story!',
+              'Development of the a first MVP in PHP'
             ]
           },
           techs: {
@@ -348,7 +347,7 @@ export default {
           },
           tags: {
             'FR': ['Stage', 'Anecdote'],
-            'EN': ['Stage', 'Anecdote']
+            'EN': ['Internship', 'Anecdote']
           }
         },
       ]

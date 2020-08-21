@@ -4,21 +4,21 @@
       id="print-header"
       class="d-none d-print-block"
     >
-      Retrouvez ce CV sous format interactif :
+      {{ trans('SEE_CV') }}
       <a
         href="https://pbriet.github.io"
         target="_blank"
       >
-        https://pbriet.github.io
+        https://pbriet.github.io?lang={{ lang }}
       </a>
     </div>
-    <div id="flags">
+    <div id="flags" class="d-print-none">
       <a
-        v-for="lang in langs"
-        :key="lang"
-        :href="lang_href(lang)"
+        v-for="langOption in langs"
+        :key="langOption"
+        :href="lang_href(langOption)"
       >
-        {{ lang }}
+        {{ langOption }}
       </a>
     </div>
     <v-fade-transition
@@ -41,11 +41,13 @@
               <v-layout wrap>
                 <v-flex
                   sm4
+                  id="sidebar-column"
                 >
                   <sidebar-container class="fill-height" />
                 </v-flex>
                 <v-flex
                   sm8
+                  id="content-column"
                 >
                   <content-container class="fill-height" />
                 </v-flex>
@@ -61,16 +63,24 @@
 <script>
 import SidebarContainer from '@/sidebar/Container'
 import ContentContainer from '@/content/Container'
+import I18nMixin from '@/i18nmixin'
 
 export default {
-  name      : 'MainContainer',
+  name: 'MainContainer',
+  mixins: [I18nMixin],
   components: {
     ContentContainer,
     SidebarContainer,
   },
   data () {
     return {
-      langs: ['FR', 'EN']
+      langs: ['FR', 'EN'],
+      translations: {
+        'SEE_CV': {
+          'FR': 'Retrouvez ce CV sous format interactif :',
+          'EN': 'Read this CV in interactive mode:'
+        }
+      }
     }
   },
   methods: {
@@ -99,6 +109,12 @@ body, .v-card__subtitle, .v-card__text
   @page
     size: 420mm 594mm
     margin: 0mm
+
+  #sidebar-column
+    flex-basis: 25%
+
+  #content-column
+    flex-basis: 75%
 
 #print-header
   padding: 30px 0px 10px 0px

@@ -164,7 +164,7 @@ export default {
         },
         SELFTRAINING: {
           'FR': 'Auto-apprentissage',
-          'EN': 'Self-learning'
+          'EN': 'Self-learner'
         },
         HOBBIES: {
           'FR': 'Loisirs',

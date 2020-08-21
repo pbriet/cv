@@ -42,7 +42,7 @@
       >
         <div
           v-for="tech in filteredTechs"
-          :key="tech.name"
+          :key="tech.icon"
           class="tech-col"
         >
           <v-card
@@ -65,7 +65,12 @@
                 </v-col>
                 <v-col :cols="nbColsTechTitle(detailed)"  class="text-center">
                   <span class="tech-title">
-                    {{ tech.name }}
+                    <template v-if="tech.name.FR">
+                      {{ transDict(tech.name) }}
+                    </template>
+                    <template v-else>
+                      {{ tech.name }}
+                    </template>
                   </span>
                 </v-col>
               </v-row>
@@ -289,7 +294,7 @@ export default {
               'Ligne de commande'
             ],
             'EN': [
-              'Configuring from scratch : 2 projects',
+              'Configuring 2 projects from scratch',
               'Google Cloud, Amazon EKS (kube2iam, ALB, external-secrets)',
               'Skaffold, Helm, Minikube',
               'Configs, Secrets, Jobs, Deployment, Ingress, Services',
@@ -432,7 +437,7 @@ export default {
         {
           categories: ['back'],
           icon: 'mdi-cogs',
-          name: 'Algorithmie',
+          name: { 'FR': 'Algorithmie', 'EN': 'Algorithms' },
           level: 'high',
           details: {
             'FR': [
@@ -524,6 +529,7 @@ export default {
 
   .tech-col
     display: flex
+    page-break-inside: avoid !important
     flex: 0 0 30%
     justify-content: space-around
     transition: transform 0.8s ease

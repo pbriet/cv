@@ -114,24 +114,24 @@ export default {
 
             <h3>An intellectual challenge</h3>
 
-            My main motives are to learn new things, to resolve complex problems with simple and elegant solutions. It brings me high satisfaction.<br><br>
+            My main motives are: learning new things, resolving complex problems with simple and elegant solutions. It brings me high satisfaction.<br><br>
 
-            At this point of my career, I have a pretty good knowledge in 2 areas: frontend and backend development (especially the last one). I'd like to develop a new domain of expertise : DevOPS, artificial intelligence, or any intersting topic that you may suggest.
+            At this point of my career, I have a pretty good knowledge in 2 fields: frontend and backend development (especially the last one). I'd like to extend my expertise to new domains: DevOPS, artificial intelligence, or any intersting topic that you may suggest.
 
             <h3>A new working environment</h3>
 
-            Until this day, I've always worked in small businesses (1 to 11 employees). I'm curious to discover medium/large enterprises.<br>
+            Until this day, I've always worked in small businesses (1 to 11 employees). I'm now curious to discover medium/large enterprises.<br>
 
             But I'm still open to opportunities in startups, or as a freelance.
 
             <h3>Working with top-level engineers</h3>
 
-            I wish to join a team with highly-skilled colleagues, involved and tolerants.
+            I wish to join a team with highly-skilled colleagues, involved in a team with benevolent leadership.
 
             <h3>A remote-friendly employer</h3>
 
             I think that working remotely is a win-win: less energy wasted in transports, better productivity.<br>
-            I really do like spending time with my teammates, but I will value your offer if you are open to a few days of remote work.
+            I really do like spending time with my teammates, but I will value a few days of remote work.
           `
         },
         HUMAN_SKILLS: {
@@ -166,7 +166,7 @@ export default {
 
             Je n'ai pas peur de me confronter à l'inconnu et d'apprendre de nouvelles technologies/pratiques. J'y trouve d'ailleurs un certain plaisir.<br>
 
-            Je me suis auto-formé à : Django, VueJS, Ansible, Kubernetes. Puis j'ai formé les équipes dans lesquelles je travaillais.<br><br>
+            Je me suis auto-formé à : Django, VueJS, Ansible, Docker, Kubernetes. Puis j'ai formé les équipes dans lesquelles je travaillais.<br><br>
 
             Si j'apprécie certains univers (Python, Docker, ...), je suis donc parfaitement ouvert au travail dans d'autres environnements (Java, NodeJS, ...)
 
@@ -176,24 +176,24 @@ export default {
           `,
           'EN': `<h3>An entrepreneurial spirit</h3>
 
-            Having co-created 2 businesses (twice my initiative), what I see in a company is much more than the technical aspects. What I care about is customer satisfaction and cost-effectiveness. I have a good culture in sales and marketing.
+            Having co-created 2 businesses (twice my initiative), what I see in a company is much more than the technical aspects. What I care about is customer satisfaction and cost-effectiveness. I have a good culture in sales and marketing, but what I'm good at is engineering.
 
             <h3>Meticulous and efficient</h3>
 
-            I like things to be pretty and clean. That's the only way a project can work in the long-terme.
+            I like things to be pretty and clean. That's the only way a project can work in the medium-term.
 
             <br><br>
 
             Still, I'm not a perfectionist but a pragmatic developer. If the deadline is short, I won't waste time on details.<br>
-            When I commit myself to a deadline, I always meet the expectations (which is quite rare in the developer world!)
+            When I commit myself to a deadline, I always meet the expectations (which is quite rare in the world of developers!)
 
             <h3>Self-learner</h3>
 
             I'm not afraid to learn new technologies/methodologies. On the contrary, I really enjoy it.<br>
 
-            I have self-learned: Django, VueJS, Ansible, Kubernetes. Once I'd mastered the technologies, I taught my co-workers.<br><br>
+            I have self-learned: Django, VueJS, Ansible, Docker, Kubernetes. Once I master a new technology, I also like to share it to my colleagues.<br><br>
 
-            I'm fond of some technologies that I master (Python, Docker, ...), but I'm open to discover other environments (Java, NodeJS, ...)
+            I'm fond of some technologies that I already master (Python, Docker, ...), but I'm open to discover other environments (Java, NodeJS, ...)
 
             <h3>Horizontal leadership</h3>
 
