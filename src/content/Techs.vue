@@ -42,7 +42,7 @@
       >
         <div
           v-for="tech in filteredTechs"
-          :key="tech.icon"
+          :key="tech.key"
           class="tech-col"
         >
           <v-card
@@ -150,6 +150,7 @@ export default {
           categories: ['back'],
           icon: 'mdi-language-python',
           name: 'Python',
+          key: 'python',
           level: 'expert',
           experience: 13,
           details: {
@@ -171,6 +172,7 @@ export default {
           categories: ['back'],
           img: '/img/techs/django.svg',
           name: 'Django',
+          key: 'django',
           level: 'expert',
           experience: 7,
           details: {
@@ -192,6 +194,7 @@ export default {
           categories: ['devops'],
           icon: 'mdi-docker',
           name: 'Docker',
+          key: 'docker',
           level: 'high',
           experience: 4,
           details: {
@@ -211,6 +214,7 @@ export default {
           categories: ['front'],
           icon: 'mdi-vuejs',
           name: 'VueJS',
+          key: 'vuejs',
           level: 'high',
           experience: 3,
           details: {
@@ -228,6 +232,7 @@ export default {
           categories: ['devops'],
           icon: 'mdi-ansible',
           name: 'Ansible',
+          key: 'ansible',
           level: 'high',
           experience: 7,
           details: {
@@ -245,6 +250,7 @@ export default {
           categories: ['devops'],
           icon: 'mdi-linux',
           name: 'Linux',
+          key: 'linux',
           level: 'high',
           experience: 9,
           details: {
@@ -266,6 +272,7 @@ export default {
           categories: ['front'],
           icon: 'mdi-angular',
           name: 'AngularJS',
+          key: 'angular',
           level: 'high',
           experience: 4,
           details: {
@@ -283,6 +290,7 @@ export default {
           categories: ['devops'],
           icon: 'mdi-kubernetes',
           name: 'Kubernetes',
+          key: 'kubenernetes',
           level: 'high',
           experience: 2,
           details: {
@@ -306,6 +314,7 @@ export default {
           categories: ['devops'],
           icon: 'mdi-source-branch',
           name: 'GIT',
+          key: 'git',
           level: 'high',
           experience: 9,
           details: {
@@ -325,6 +334,7 @@ export default {
           categories: ['front'],
           icon: 'mdi-webpack',
           name: 'Webpack',
+          key: 'webpack',
           level: 'medium',
           experience: 2,
           details: {
@@ -342,6 +352,7 @@ export default {
           categories: ['back'],
           icon: 'mdi-database-search',
           name: 'SQL',
+          key: 'sql',
           level: 'high',
           experience: 9,
           details: {
@@ -363,6 +374,7 @@ export default {
           categories: ['back'],
           img: '/img/techs/mongo.jpeg',
           name: 'MongoDB',
+          key: 'mongodb',
           level: 'medium',
           experience: 9,
           details: {
@@ -380,6 +392,7 @@ export default {
           categories: ['back'],
           icon: 'mdi-language-cpp',
           name: 'C++',
+          key: 'cpp',
           level: 'high',
           experience: 8,
           details: {
@@ -397,6 +410,7 @@ export default {
           categories: ['front'],
           icon: 'mdi-language-html5',
           name: 'HTML',
+          key: 'html',
           level: 'high',
           experience: 14
         },
@@ -404,6 +418,7 @@ export default {
           categories: ['front'],
           icon: 'mdi-language-javascript',
           name: 'Javascript',
+          key: 'js',
           level: 'high',
           experience: 10,
           details: {
@@ -421,6 +436,7 @@ export default {
           categories: ['back'],
           img: '/img/techs/flask.png',
           name: 'Flask',
+          key: 'flask',
           level: 'medium',
           experience: 3,
           details: {
@@ -439,6 +455,7 @@ export default {
           icon: 'mdi-cogs',
           name: { 'FR': 'Algorithmie', 'EN': 'Algorithms' },
           level: 'high',
+          key: 'algo',
           details: {
             'FR': [
               'Spécialisation master',
