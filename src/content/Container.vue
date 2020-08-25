@@ -5,6 +5,7 @@
     light
   >
     <v-card-text id="main-container-card-content">
+
       <content-section
         :title="trans('LOOKING_FOR')"
       >
@@ -75,7 +76,7 @@ export default {
           'EN': 'Experience',
         },
         LOOKING_FOR: {
-          'FR': 'Ce que je cherche',
+          'FR': 'En bref',
           'EN': 'What I\'m looking for'
         },
         LOOKING_FOR_SHORT: {
@@ -90,25 +91,18 @@ export default {
         LOOKING_FOR_LONG: {
           'FR': `
 
-            <h3>Un challenge intellectuel</h3>
+            <h3>Expert Python</h3>
 
-            Mon principal moteur est ma soif de connaissances. J'aime apprendre, me confronter à de nouveaux problèmes, les solutionner de manière élégante. J'y trouve beaucoup de satisfaction.<br><br>
+            Avec 13 ans d'expérience dans l'univers Python, je suis parfaitement opérationnel, notamment dans tout l'univers du web  (Django, Flask). Très productif, je peux notamment vous aider à atteindre des deadlines serrées.
 
-            Ayant désormais une bonne maîtrise de la plupart des problématiques backend/frontend, j'aimerais tendre vers une nouvelle direction : DevOPS, Intelligence Artificielle, ou autre univers connexe au développement.
+            <h3>DevOps</h3>
 
-            <h3>Un nouvel environnement</h3>
+            Ces dernières années, je me suis davantage focalisé sur les aspects DevOps : microservices (Docker), Kubernetes, déploiement dans le cloud (AWS, Google).<br>
+            Si mon expérience est plus modeste dans le domaine, j'ai déjà accompagné 2 structures dans la refonte de leur architecture. Mon sens de la rigueur et ma capacité d'apprentissage me permettent d'affronter tout sujet autour du DevOps.
 
-            Pendant toute ma carrière, j'ai travaillé dans des petites structures (de 1 à 11 salariés). J'ai aujourd'hui la curiosité de découvrir l'univers d'entreprises de taille plus critique.<br>
-            Je reste néanmoins ouvert à des opportunités dans de petites structures.
+            <h3>VueJS</h3>
 
-            <h3>De l'émulation</h3>
-
-            J'aimerais rejoindre une équipe compétente et ambitieuse (au bon sens du terme). Des personnes investies dans le projet d'entreprise et bienveillantes.
-
-            <h3>Une entreprise remote-friendly</h3>
-
-            Je considère la pratique du télétravail comme étant gagnant-gagnant : moins de fatigue, moins de temps dans les transports, une meilleure productivité.<br>
-            Si j'apprécie l'ambiance de bureau et les interactions sociales avec les collègues, pouvoir se déplacer moins de 5 jours par semaine est un gros plus.
+            Bien qu'avant tout un développeur backend, j'ai trouvé en VueJS ce qui pour moi se fait de mieux en technologie Frontend/SPA. Après 2 années d'utilisation assez intensive, ce serait un plaisir retravailler sur ce framework et/ou de vous accompagner dans cette direction.
           `,
           'EN': `
 
@@ -162,17 +156,6 @@ export default {
             Pour autant, je ne suis pas un perfectionniste, mais un pragmatique. Si les délais sont courts, il faut aller à l'essentiel et faire les sacrifices nécessaires.<br>
             Quand je m'engage sur une date, je tiens toujours mes délais (peu commun dans le milieu !)
 
-            <h3>Forte capacité d'apprentissage</h3>
-
-            Je n'ai pas peur de me confronter à l'inconnu et d'apprendre de nouvelles technologies/pratiques. J'y trouve d'ailleurs un certain plaisir.<br>
-
-            Je me suis auto-formé à : Django, VueJS, Ansible, Docker, Kubernetes. Puis j'ai formé les équipes dans lesquelles je travaillais.<br><br>
-
-            Si j'apprécie certains univers (Python, Docker, ...), je suis donc parfaitement ouvert au travail dans d'autres environnements (Java, NodeJS, ...)
-
-            <h3>Leadership horizontal</h3>
-
-            Bien que d'un naturel plutôt discret, j'ai toujours naturellement pris le lead des équipes dans lesquelles j'ai été (et ce, même en télétravail). Je sais organiser, accompagner, écouter, impulser de nouvelles pratiques. J'ai une forte préférence pour les organisations peu hiérarchiques.
           `,
           'EN': `<h3>An entrepreneurial spirit</h3>
 
@@ -186,18 +169,7 @@ export default {
 
             Still, I'm not a perfectionist but a pragmatic developer. If the deadline is short, I won't waste time on details.<br>
             When I commit myself to a deadline, I always meet the expectations (which is quite rare in the world of developers!)
-
-            <h3>Self-learner</h3>
-
-            I'm not afraid to learn new technologies/methodologies. On the contrary, I really enjoy it.<br>
-
-            I have self-learned: Django, VueJS, Ansible, Docker, Kubernetes. Once I master a new technology, I also like to share it to my colleagues.<br><br>
-
-            I'm fond of some technologies that I already master (Python, Docker, ...), but I'm open to discover other environments (Java, NodeJS, ...)
-
-            <h3>Horizontal leadership</h3>
-
-            With a rather calm personality, I'm clearly not a chef. But I've always taken the lead in the teams I worked. I'm pretty good at organizing, orchestrating, communicating and introducing change.`
+`
         }
 
       }

@@ -120,6 +120,10 @@ export default {
                 'FR': 'Disponible Octobre 2020',
                 'EN': 'Available starting October 2020'
               },
+              text: {
+                'FR': 'Freelance (micro-entreprise)',
+                'EN': 'Freelance (micro-entreprise)'
+              },
               icon: 'mdi-calendar'
             }
           ],

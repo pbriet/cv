@@ -105,7 +105,7 @@ export default {
       },
       experiences: [
         { date: '2016-2020',
-          company: 'Les Octets Libres (Quimperlé)',
+          company: 'Freelance puis Les Octets Libres (Quimperlé)',
           title: 'Ingénieur full-stack/devops - Associé co-fondateur',
           shortContent: {
             'FR': 'Réalisation de projets sur mesure pour des TPE/PME : backoffice, API, connexion aux CRM',

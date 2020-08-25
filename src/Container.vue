@@ -1,26 +1,5 @@
 <template>
   <v-app id="dark-template">
-    <div
-      id="print-header"
-      class="d-none d-print-block"
-    >
-      {{ trans('SEE_CV') }}
-      <a
-        href="https://pbriet.github.io"
-        target="_blank"
-      >
-        https://pbriet.github.io?lang={{ lang }}
-      </a>
-    </div>
-    <div id="flags" class="d-print-none">
-      <a
-        v-for="langOption in langs"
-        :key="langOption"
-        :href="lang_href(langOption)"
-      >
-        {{ langOption }}
-      </a>
-    </div>
     <v-fade-transition
       mode="out-in"
       type="animation"
