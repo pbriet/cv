@@ -81,10 +81,10 @@ export default {
         LOOKING_FOR_SHORT: {
           'FR': `
             Un nouveau défi à relever, pour évoluer techniquement et humainement.<br>
-            J'envisage notamment d'évoluer dans les domaines suivants : <b>Devops</b>, IA, management, ...`,
+            J'envisage notamment d'évoluer dans les domaines suivants : <b>Devops/Cloud engineering</b>, IA, management, ...`,
           'EN': `
             A new challenge. I'd like to learn new technical and human skills.<br>
-            I'm especially attracted by the following : <b>Devops</b>, AI, management, ...
+            I'm especially attracted by the following : <b>Devops/Cloud engineering</b>, AI, management, ...
           `
         },
         LOOKING_FOR_LONG: {
@@ -94,7 +94,7 @@ export default {
 
             Mon principal moteur est ma soif de connaissances. J'aime apprendre, me confronter à de nouveaux problèmes, les solutionner de manière élégante. J'y trouve beaucoup de satisfaction.<br><br>
 
-            Ayant désormais une bonne maîtrise de la plupart des problématiques backend/frontend, j'aimerais tendre vers une nouvelle direction : DevOPS, Intelligence Artificielle, ou autre univers connexe au développement.
+            Ayant désormais une bonne maîtrise de la plupart des problématiques backend/frontend, j'aimerais tendre vers une nouvelle direction : DevOPS, Cloud Engineering, Intelligence Artificielle, ou autre univers connexe au développement.
 
             <h3>Un nouvel environnement</h3>
 
@@ -116,7 +116,7 @@ export default {
 
             My main motives are: learning new things, resolving complex problems with simple and elegant solutions. It brings me high satisfaction.<br><br>
 
-            At this point of my career, I have a pretty good knowledge in 2 fields: frontend and backend development (especially the last one). I'd like to extend my expertise to new domains: DevOPS, artificial intelligence, or any intersting topic that you may suggest.
+            At this point of my career, I have a pretty good knowledge in 2 fields: frontend and backend development (especially the last one). I'd like to extend my expertise to new domains: DevOPS, Cloud Engineering, artificial intelligence, or any interesting topic that you may suggest.
 
             <h3>A new working environment</h3>
 

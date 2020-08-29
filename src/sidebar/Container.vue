@@ -36,6 +36,7 @@
         <ul>
           <li v-html="trans('FULLSTACK_DEVELOPER')"></li>
           <li>{{ trans('SOFTWARE_ARCHITECT') }}</li>
+          <li>{{ trans('DEVOPS') }}</li>
           <li>{{ trans('EXPERIENCE') }}</li>
           <li>{{ trans('ENTREPRENEUR') }}</li>
           <li>{{ trans('PRAGMATIC') }}</li>
@@ -106,6 +107,13 @@ export default {
             },
             {
               name: {
+                'FR': '06.80.32.77.81',
+                'EN': '(+33) (0)6 80 32 77 81'
+              },
+              icon: 'mdi-phone'
+            },
+            {
+              name: {
                 'FR': '13 janvier 1985',
                 'EN': 'Jan 13th, 1985'
               },
@@ -145,6 +153,10 @@ export default {
         SOFTWARE_ARCHITECT: {
           'FR': 'Architecte logiciel',
           'EN': 'Software architect'
+        },
+        DEVOPS: {
+          'FR': 'DevOps',
+          'EN': 'DevOps'
         },
         EXPERIENCE: {
           'FR': '13 ans d\'expérience',

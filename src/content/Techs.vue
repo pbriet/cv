@@ -257,13 +257,13 @@ export default {
             'FR': [
               'Administration : utilisateurs, SSH, sudoers',
               'Gestion de paquets. Installations / Configurations.',
-              'cron, systemd, rotation de logs',
+              'cron, systemd, rotation de logs, nginx',
               'Distribs : Debian, Ubuntu. Egalement : Alpine'
             ],
             'EN': [
               'Users management: SSH, sudoers',
               'Package management',
-              'cron, systemd, logs analysis',
+              'cron, systemd, logs analysis, nginx',
               'Debian, Ubuntu. A little bit of Alpine'
             ]
           }

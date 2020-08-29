@@ -139,7 +139,7 @@ export default {
             'FR': [
               'Outil de réalisation de devis automatisés pour les commerciaux d\'une PME d\'expertise comptable (lié à Salesforce)',
               'Outil de réalisation de devis sur site public (https://www.slead.co)',
-              'Backoffice pour site de mise en relation de vétérinaire en ligne (téléphone, visio, ...)',
+              'Backoffice pour site de mise en relation de vétérinaire en ligne (téléphone, visio, via Twilio)',
               'Outil de suivi de l\'entretien des bâtiments de La Défense (nettoyage, contrôle)',
               'Renfort de l\'équipe Weenat pour finalisation d\'une nouvelle version (dont DevOps)'
             ],
@@ -157,14 +157,14 @@ export default {
               'PHP : Wordpress (plus anecdotique)',
               'JS : ES6, VueJS, Webpack, jQuery',
               'Devops : Ansible, Docker, Kubernetes, Vagrant',
-              'Système : Linux'
+              'Système : Linux (administration)'
             ],
             'EN': [
               'Python : Django, Flask',
               'PHP : Wordpress',
               'JS : ES6, VueJS, Webpack, jQuery',
               'Devops : Ansible, Docker, Kubernetes, Vagrant',
-              'Sysadmin : Linux'
+              'Sysadmin : Linux (admin)'
             ],
           },
           links: [
@@ -212,14 +212,14 @@ export default {
               'C++ : Algorithme haute performance + librairie Boost',
               'JS : AngularJS, Grunt',
               'Devops : Ansible, Vagrant',
-              'Système : Linux'
+              'Système : Linux (administration)'
             ],
             'EN': [
               'Python: Django',
               'C++: Highly optimized genetic algorithm, Boost library',
               'JS: AngularJS, Grunt',
               'Devops: Ansible, Vagrant',
-              'Sysadmin: Linux'
+              'Sysadmin: Linux (admin)'
             ]
           },
           links: [
