@@ -11,6 +11,7 @@
             {{ title }}
           </h3>
           <v-switch
+            v-if="toggleButton"
             v-model="detailed"
             dense
             class="title-switch d-none d-sm-flex d-print-none"
@@ -19,6 +20,7 @@
         </div>
       </div>
       <v-switch
+        v-if="toggleButton"
         v-model="detailed"
         dense
         class="title-switch title-switch-xs d-sm-none d-print-none"
@@ -56,7 +58,8 @@ export default {
   components: { },
   props     : {
     title: { type: String, default: '' },
-    monoSlot: { type: Boolean, default: false }
+    monoSlot: { type: Boolean, default: false },
+    toggleButton: { type: Boolean, default: true },
   },
   data () {
     return {

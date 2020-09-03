@@ -49,6 +49,27 @@
         </template>
       </content-section>
 
+
+      <content-section
+        id="education"
+        :title="trans('EDUCATION')"
+        mono-slot
+        :toggleButton="false"
+      >
+        <template>
+
+          <v-container>
+            <v-card id="education-card">
+              <v-card-text>
+                <v-icon large>mdi-certificate</v-icon> <b>{{ trans('EDUCATION_MAIN') }}</b><br>
+                <div v-html="trans('EDUCATION_DETAILS')"></div>
+              </v-card-text>
+            </v-card>
+          </v-container>
+
+        </template>
+      </content-section>
+
     </v-card-text>
   </v-card>
 </template>
@@ -73,6 +94,18 @@ export default {
         EXPERIENCE: {
           'FR': 'Expérience',
           'EN': 'Experience',
+        },
+        EDUCATION: {
+          'FR': 'Formation',
+          'EN': 'Education',
+        },
+        EDUCATION_MAIN: {
+          'FR': '2007 - Ingénieur EPITA (Mention Très Bien)',
+          'EN': '2007 - EPITA Paris (first class honours)'
+        },
+        EDUCATION_DETAILS: {
+          'FR': "Ecole pour l'informatique et les techniques avancées (Paris)",
+          'EN': "Graduate software engineer masters degree.<br/>Ecole pour l'informatique et les techniques avancées (Paris)."
         },
         LOOKING_FOR: {
           'FR': 'Ce que je cherche',
@@ -222,5 +255,8 @@ export default {
 
   .progress
     margin-top: 0.1rem
+
+#education-card
+  width: 500px
 
 </style>
