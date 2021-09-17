@@ -114,57 +114,43 @@ export default {
         LOOKING_FOR_SHORT: {
           'FR': `
             Un nouveau défi à relever, pour évoluer techniquement et humainement.<br>
-            J'envisage notamment d'évoluer dans les domaines suivants : <b>Devops/Cloud engineering</b>, IA, management, ...`,
+            Un projet d'entreprise fort dans un environnement chaleureux et bienveillant`,
           'EN': `
             A new challenge. I'd like to learn new technical and human skills.<br>
-            I'm especially attracted by the following : <b>Devops/Cloud engineering</b>, AI, management, ...
-          `
-        },
+            An ambitious corporate vision, with benevolent leadership
+          `        },
         LOOKING_FOR_LONG: {
           'FR': `
 
             <h3>Un challenge intellectuel</h3>
 
-            Mon principal moteur est ma soif de connaissances. J'aime apprendre, me confronter à de nouveaux problèmes, les solutionner de manière élégante. J'y trouve beaucoup de satisfaction.<br><br>
-
-            Ayant désormais une bonne maîtrise de la plupart des problématiques backend/frontend, j'aimerais tendre vers une nouvelle direction : DevOPS, Cloud Engineering, Intelligence Artificielle, ou autre univers connexe au développement.
-
-            <h3>Un nouvel environnement</h3>
-
-            Pendant toute ma carrière, j'ai travaillé dans des petites structures (de 1 à 11 salariés). J'ai aujourd'hui la curiosité de découvrir l'univers d'entreprises de taille plus critique.<br>
-            Je reste néanmoins ouvert à des opportunités dans de petites structures.
+            Mon principal moteur est ma soif de connaissances. J'aime apprendre, me confronter à de nouveaux problèmes, les solutionner de manière élégante. J'y trouve beaucoup de satisfaction.<br>
 
             <h3>De l'émulation</h3>
 
-            J'aimerais rejoindre une équipe compétente et ambitieuse (au bon sens du terme). Des personnes investies dans le projet d'entreprise et bienveillantes.
+            J'aimerais rejoindre une équipe compétente et ambitieuse (au bon sens du terme). Des personnes investies dans le projet d'entreprise et bienveillantes.<br><br>
+            Idéalement, je souhaiterais retrouver l'univers de l'édition logicielle, où toute une équipe construit collectivement un produit de qualité.
+
 
             <h3>Une entreprise remote-friendly</h3>
 
-            Je considère la pratique du télétravail comme étant gagnant-gagnant : moins de fatigue, moins de temps dans les transports, une meilleure productivité.<br>
-            Si j'apprécie l'ambiance de bureau et les interactions sociales avec les collègues, pouvoir se déplacer moins de 5 jours par semaine est un gros plus.
+            Je considère la pratique du télétravail partiel comme étant gagnant-gagnant : moins de fatigue, moins de temps dans les transports, une meilleure productivité.<br>
+            Si j'apprécie l'ambiance de bureau et les interactions sociales avec les collègues, la flexibilité est un gros plus.
           `,
           'EN': `
 
             <h3>An intellectual challenge</h3>
 
-            My main motives are: learning new things, resolving complex problems with simple and elegant solutions. It brings me high satisfaction.<br><br>
+            My main motives are: learning new things, resolving complex problems with simple and elegant solutions. It brings me high satisfaction.<br>
 
-            At this point of my career, I have a pretty good knowledge in 2 fields: frontend and backend development (especially the last one). I'd like to extend my expertise to new domains: DevOPS, Cloud Engineering, artificial intelligence, or any interesting topic that you may suggest.
+            <h3>Working in a motivated team</h3>
 
-            <h3>A new working environment</h3>
-
-            Until this day, I've always worked in small businesses (1 to 11 employees). I'm now curious to discover medium/large enterprises.<br>
-
-            But I'm still open to opportunities in startups, or as a freelance.
-
-            <h3>Working with top-level engineers</h3>
-
-            I wish to join a team with highly-skilled colleagues, involved in a team with benevolent leadership.
+            I'd like to live a real collective experience by sharing common goals with my colleagues: building a great product, facing the same difficulties together and getting through them.<br/>
 
             <h3>A remote-friendly employer</h3>
 
-            I think that working remotely is a win-win: less energy wasted in transports, better productivity.<br>
-            I really do like spending time with my teammates, but I will value a few days of remote work.
+            I believe that partial remote work is a win-win: less energy wasted in transports, better productivity.<br>
+            I really do like spending time with my teammates, but I will value some flexibility.
           `
         },
         HUMAN_SKILLS: {
@@ -230,7 +216,7 @@ export default {
 
             <h3>Horizontal leadership</h3>
 
-            With a rather calm personality, I'm clearly not a chef. But I've always taken the lead in the teams I worked. I'm pretty good at organizing, orchestrating, communicating and introducing change.`
+            With a rather calm personality, I'm clearly not a chef. But I've always taken the lead in the teams I worked. I'm pretty good at organizing, orchestrating and introducing change.`
         }
 
       }

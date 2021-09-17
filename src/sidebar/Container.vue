@@ -35,8 +35,8 @@
         </div>
         <ul>
           <li v-html="trans('FULLSTACK_DEVELOPER')"></li>
+          <li v-html="trans('DEVOPS')"></li>
           <li>{{ trans('SOFTWARE_ARCHITECT') }}</li>
-          <li>{{ trans('DEVOPS') }}</li>
           <li>{{ trans('EXPERIENCE') }}</li>
           <li>{{ trans('ENTREPRENEUR') }}</li>
           <li>{{ trans('PRAGMATIC') }}</li>
@@ -119,14 +119,14 @@ export default {
               },
               icon: 'mdi-cake-variant',
               text: {
-                'FR': '35 ans - Français',
-                'EN': '35 years old - French'
+                'FR': '36 ans - Français',
+                'EN': '36 years old - French'
               }
             },
             {
               name: {
-                'FR': 'Disponible Octobre 2020',
-                'EN': 'Available starting October 2020'
+                'FR': 'Actuellement en poste',
+                'EN': 'Currently working at Apalia'
               },
               icon: 'mdi-calendar'
             }
@@ -135,8 +135,8 @@ export default {
       },
       translations: {
         SUBTITLE: {
-          'FR': 'Ingénieur web en quête de challenge',
-          'EN': 'Full-stack web engineer, looking for challenge'
+          'FR': 'Ingénieur Dev/Devops',
+          'EN': 'Full-stack web engineer, Devops'
         },
         KEYPOINT_TITLE: {
           'FR': 'Points clés',
@@ -150,17 +150,17 @@ export default {
           'FR': 'Développeur <b>full-stack</b>',
           'EN': '<b>Full stack</b> developer'
         },
+        DEVOPS: {
+          'FR': 'Ingénieur <b>Devops</b> - Kubernetes',
+          'EN': '<b>Devops</b> Engineer - Kubernetes'
+        },
         SOFTWARE_ARCHITECT: {
           'FR': 'Architecte logiciel',
           'EN': 'Software architect'
         },
-        DEVOPS: {
-          'FR': 'DevOps',
-          'EN': 'DevOps'
-        },
         EXPERIENCE: {
-          'FR': '13 ans d\'expérience',
-          'EN': '13 years experience'
+          'FR': '14 ans d\'expérience',
+          'EN': '14 years experience'
         },
         ENTREPRENEUR: {
           'FR': 'Esprit d\'entrepreneur',

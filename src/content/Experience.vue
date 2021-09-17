@@ -104,6 +104,59 @@ export default {
         }
       },
       experiences: [
+        { date: '2020-2021',
+          company: 'Apalia (Annecy)',
+          title: 'Kubernetes/Devops consultant',
+          shortContent: {
+            'FR': 'Installation de clusters Openshift. Mise en place en pipelines CI/CD. Veille technologique sur multiples sujets.',
+            'EN': 'Installation of Openshift clusters. Setting up CI/CD pipelines. Technology intelligence.'
+          },
+          companyDetails: {
+            'FR': 'Petite entreprise de consulting haut de gamme sur Kubernetes et les pratiques DevOps',
+            'EN': 'Providing highly-skilled consultants for adopting Kubernetes/Devops practices'
+          },
+          roles: {
+            'FR': [
+              'Consultant'
+            ],
+            'EN': [
+              'Consultant'
+            ],
+          },
+          projects: {
+            'FR': [
+              'Installation de clusters Openshift on premise et hybride (vSphere, AWS, Terraform)',
+              'Mise en place de CI/CD sur des projets sous-traités (Bamboo, Maven, Gradle, Npm, Powershell, Openshift)',
+              'Veille technologique (GitOps, Secrets management, Edge computing, univers Kubernetes)'
+            ],
+            'EN': [
+              'Installation of Openshift clusters : on premise and hybrid (vSphere, AWS, Terraform)',
+              'Setting up CI/CD pipelines on outsourced projects (Bamboo, Maven, Gradle, Npm, Powershell, Openshift)',
+              'Technology intelligence (GitOps, Secrets management, Edge computing, everything around Kubernetes)'
+            ]
+          },
+          techs: {
+            'FR': [
+              'Kubernetes : Openshift, Rancher, K3S',
+              'CI/CD : Terraform, Ansible, Gitlab CI, Bamboo, ArgoCD, Tekton',
+              'Docker : docker-compose, podman, buildah, kaniko, optimisations, builds Openshift',
+              'Divers : Traefik, Nginx, Haproxy'
+            ],
+            'EN': [
+              'Kubernetes : Openshift, Rancher, K3S',
+              'CI/CD : Terraform, Ansible, Gitlab CI, Bamboo, ArgoCD, Tekton',
+              'Docker : docker-compose, podman, buildah, kaniko, optimisations, builds Openshift',
+              'Miscellaneous : Traefik, Nginx, Haproxy'
+            ],
+          },
+          // links: [
+          //   { label: {'FR': 'Apalia', 'EN': 'Apalia'}, url: 'https://www.apalia.net' }
+          // ],
+          tags: {
+            'FR': ['Devops', 'Kubernetes'],
+            'EN': ['Devops', 'Kubernetes']
+          }
+        },
         { date: '2016-2020',
           company: 'Les Octets Libres (Quimperlé)',
           title: 'Ingénieur full-stack/devops - Associé co-fondateur',
@@ -184,7 +237,7 @@ export default {
             'EN': 'Building a tech startup: from development to sales&marketing'
           },
           companyDetails: {
-            'FR': 'Startup éditrice d\'un planificateur de repas en ligne ultra-personnalisé. Les utilisateurs peuvent saisir leurs goûts, contraintes, objectifs, et des plannings de repas leur sont proposés sur mesure.',
+            'FR': 'Petite entreprise éditrice d\'un planificateur de repas en ligne ultra-personnalisé. Les utilisateurs peuvent saisir leurs goûts, contraintes, objectifs, et des plannings de repas leur sont proposés sur mesure.',
             'EN': 'Startup: Higly-personnalized online meal planner. Users can define their tastes, personal constraints and targets. Cook&Be then generates custom meal plannings for the week from all these parameters.'
           },
           roles: {

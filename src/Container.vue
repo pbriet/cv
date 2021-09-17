@@ -78,7 +78,7 @@ export default {
       translations: {
         'SEE_CV': {
           'FR': 'Retrouvez ce CV sous format interactif :',
-          'EN': 'Read this CV in interactive mode:'
+          'EN': 'Read this CV in interactive mode at'
         }
       }
     }

@@ -121,13 +121,13 @@ export default {
             { value: 'all', label: 'Toutes' },
             { value: 'back', label: 'Backend' },
             { value: 'front', label: 'Frontend' },
-            { value: 'devops', label: 'DevOps / Système' }
+            { value: 'devops', label: 'DevOps / Ops' }
           ],
           'EN': [
             { value: 'all', label: 'All' },
             { value: 'back', label: 'Backend' },
             { value: 'front', label: 'Frontend' },
-            { value: 'devops', label: 'DevOps / Sysadmin' }
+            { value: 'devops', label: 'DevOps / Ops' }
           ],
         },
         LEVEL_CHOICES: {
@@ -191,26 +191,6 @@ export default {
           }
         },
         {
-          categories: ['devops'],
-          icon: 'mdi-docker',
-          name: 'Docker',
-          key: 'docker',
-          level: 'high',
-          experience: 4,
-          details: {
-            'FR': [
-              'Projets multi-containers avec Docker-compose',
-              'Volumes, réseaux',
-              'Multi-stage builds, optimisations, ...'
-            ],
-            'EN': [
-              'Container orchestration with Docker-compose',
-              'Volumes, networks',
-              'Multi-stage builds, optimizations, ...'
-            ]
-          }
-        },
-        {
           categories: ['front'],
           icon: 'mdi-vuejs',
           name: 'VueJS',
@@ -220,171 +200,11 @@ export default {
           details: {
             'FR': [
               'Développement de gros projets SPA',
-              'VueX, Vuetify, Vue-router'
+              'VueX, Vuetify, Vue-router, Websockets'
             ],
             'EN':  [
               'Large SPA projects',
-              'VueX, Vuetify, Vue-router'
-            ]
-          }
-        },
-        {
-          categories: ['devops'],
-          icon: 'mdi-ansible',
-          name: 'Ansible',
-          key: 'ansible',
-          level: 'high',
-          experience: 7,
-          details: {
-            'FR': [
-              'Déploiement de projets iso dev/staging/prod',
-              'Rôles, templates, handlers'
-            ],
-            'EN': [
-              'Multi-environment deployments (dev/staging/prod)',
-              'Roles, templates, handlers'
-            ]
-          }
-        },
-        {
-          categories: ['devops'],
-          icon: 'mdi-linux',
-          name: 'Linux',
-          key: 'linux',
-          level: 'high',
-          experience: 9,
-          details: {
-            'FR': [
-              'Administration : utilisateurs, SSH, sudoers',
-              'Gestion de paquets. Installations / Configurations.',
-              'cron, systemd, rotation de logs, nginx',
-              'Distribs : Debian, Ubuntu. Egalement : Alpine'
-            ],
-            'EN': [
-              'Users management: SSH, sudoers',
-              'Package management',
-              'cron, systemd, logs analysis, nginx',
-              'Debian, Ubuntu. A little bit of Alpine'
-            ]
-          }
-        },
-        {
-          categories: ['front'],
-          icon: 'mdi-angular',
-          name: 'AngularJS',
-          key: 'angular',
-          level: 'high',
-          experience: 4,
-          details: {
-            'FR': [
-              'Gros projet SPA',
-              'Problématiques de SEO (génération statique)'
-            ],
-            'EN': [
-              'Large SPA project',
-              'Handling of SEO issues (static serving)'
-            ]
-          }
-        },
-        {
-          categories: ['devops'],
-          icon: 'mdi-kubernetes',
-          name: 'Kubernetes',
-          key: 'kubenernetes',
-          level: 'high',
-          experience: 2,
-          details: {
-            'FR': [
-              'Configuration from scratch sur 2 projets',
-              'Google Cloud, Amazon EKS (kube2iam, ALB, external-secrets)',
-              'Skaffold, Helm, Minikube',
-              'Configs, Secrets, Jobs, Deployment, Ingress, Services',
-              'Ligne de commande'
-            ],
-            'EN': [
-              'Configuring 2 projects from scratch',
-              'Google Cloud, Amazon EKS (kube2iam, ALB, external-secrets)',
-              'Skaffold, Helm, Minikube',
-              'Configs, Secrets, Jobs, Deployment, Ingress, Services',
-              'Command line tool'
-            ]
-          }
-        },
-        {
-          categories: ['devops'],
-          icon: 'mdi-source-branch',
-          name: 'GIT',
-          key: 'git',
-          level: 'high',
-          experience: 9,
-          details: {
-            'FR': [
-              'Utilisation quotidienne',
-              'clone, checkout, commit, pull, push, logs, ...',
-              'Rarement : cherry-pick, rebase'
-            ],
-            'EN': [
-              'Daily use',
-              'clone, checkout, commit, pull, push, logs, ...',
-              'Rarely: cherry-pick, rebase'
-            ]
-          }
-        },
-        {
-          categories: ['front'],
-          icon: 'mdi-webpack',
-          name: 'Webpack',
-          key: 'webpack',
-          level: 'medium',
-          experience: 2,
-          details: {
-            'FR': [
-              'Configuration pour VueJS (via vue-cli)',
-              'Quelques customisations (configureWebpack, chainWebpack, ...)'
-            ],
-            'EN': [
-              'VueJS configurations (vue-cli)',
-              'Customizations (configureWebpack, chainWebpack, ...)'
-            ]
-          }
-        },
-        {
-          categories: ['back'],
-          icon: 'mdi-database-search',
-          name: 'SQL',
-          key: 'sql',
-          level: 'high',
-          experience: 9,
-          details: {
-            'FR': [
-              'Requêtage (direct ou via ORM)',
-              'PostgreSQL, MySQL',
-              'Administration : uniquement les bases',
-              'Optimisation de requêtes'
-            ],
-            'EN': [
-              'Queries (raw or through ORM)',
-              'PostgreSQL, MySQL',
-              'Basic administration knowledge',
-              'Query optimizations'
-            ]
-          }
-        },
-        {
-          categories: ['back'],
-          img: '/img/techs/mongo.jpeg',
-          name: 'MongoDB',
-          key: 'mongodb',
-          level: 'medium',
-          experience: 9,
-          details: {
-            'FR': [
-              'Requêtage (direct ou via ORM)',
-              'MongoAtlas'
-            ],
-            'EN': [
-              'Queries (raw or through ORM)',
-              'MongoAtlas'
+              'VueX, Vuetify, Vue-router, Websockets'
             ]
           }
         },
@@ -445,8 +265,229 @@ export default {
               'Flask-cors, Flask-jwt, Flask-socketio'
             ],
             'EN': [
-              'API REST',
+              'REST API',
               'Flask-cors, Flask-jwt, Flask-socketio'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-cloud-refresh',
+          name: { 'FR': 'CI/CD', 'EN': 'CI/CD' },
+          level: 'high',
+          experience: 2,
+          key: 'cicd',
+          details: {
+            'FR': [
+              'Gitlab CI, Bamboo',
+              'ArgoCD, Tekton',
+              'Nexus', 'Vault'
+            ],
+            'EN': [
+              'Gitlab CI, Bamboo',
+              'ArgoCD, Tekton',
+              'Nexus', 'Vault'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-docker',
+          name: 'Docker',
+          key: 'docker',
+          level: 'expert',
+          experience: 5,
+          details: {
+            'FR': [
+              'Docker-compose, Podman, Buildah',
+              'Volumes, réseaux',
+              'Best practices',
+              'Multi-stage builds, optimisations, ...'
+            ],
+            'EN': [
+              'Docker-compose, Podman, Buildah',
+              'Volumes, networks',
+              'Best practices',
+              'Multi-stage builds, optimizations, ...'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-kubernetes',
+          name: 'Kubernetes',
+          key: 'kubernetes',
+          level: 'expert',
+          experience: 3,
+          details: {
+            'FR': [
+              'Déploiement de charges en HA',
+              'Gestion des secrets, GitOPS, best practices',
+              'Connaissance des mécanismes internes',
+              'Installation de clusters on premise et hybrides',
+              'Helm, Kustomize, Skaffold'
+            ],
+            'EN': [
+              'HA deployments',
+              'Secret management, GitOps, best practices',
+              'Deep understanding of internal mechanisms',
+              'On prem/hybrid cluster deployments',
+              'Helm, Kustomize, Skaffold'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-ansible',
+          name: 'Ansible',
+          key: 'ansible',
+          level: 'high',
+          experience: 7,
+          details: {
+            'FR': [
+              'Déploiement de projets iso dev/staging/prod',
+              'Rôles, templates, handlers'
+            ],
+            'EN': [
+              'Multi-environment deployments (dev/staging/prod)',
+              'Roles, templates, handlers'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-linux',
+          name: 'Linux',
+          key: 'linux',
+          level: 'high',
+          experience: 10,
+          details: {
+            'FR': [
+              'Administration : utilisateurs, SSH, sudoers',
+              'Gestion de paquets. Installations / Configurations.',
+              'cron, systemd, DNS, rotation de logs',
+              'Distribs : Debian, Alpine, CentOS'
+            ],
+            'EN': [
+              'User management, Package management',
+              'cron, systemd, DNS, logs analysis',
+              'Debian, Alpine, CentOS'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-arrow-decision',
+          name: 'Reverse Proxy',
+          key: 'reverseproxy',
+          level: 'high',
+          experience: 6,
+          details: {
+            'FR': [
+              'Nginx, Traefik, HaProxy',
+              'Configurations web, optimisations, gestion de cache',
+              'Routing, certificats SSL, headers HTTP, ...'
+            ],
+            'EN': [
+              'Nginx, Traefik, HaProxy',
+              'Webserver configuration, optimizations, cache management',
+              'Routing, SSL certificates, HTTP headers, ...'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-terraform',
+          name: { 'FR': 'Terraform', 'EN': 'Terraform' },
+          level: 'high',
+          experience: 2,
+          key: 'terraform',
+          details: {
+            'FR': [
+              'Déploiement de clusters Kubernetes on premise / hybrides / full-cloud',
+              'Templating, modules, structure multi-layers, ...'
+            ],
+            'EN': [
+              'Kubernetes cluster deployment (on premise / hybrids / full-cloud)',
+              'Templating, modules, multi-layers architecture, ...'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-cloud',
+          name: { 'FR': 'Cloud', 'EN': 'Cloud' },
+          level: 'medium',
+          experience: 2,
+          key: 'cloud',
+          details: {
+            'FR': [
+              'AWS : VPC, networks, gateways, security groups, ...',
+              'AWS EKS et GCP GKE'
+            ],
+            'EN': [
+              'AWS : VPC, networks, gateways, security groups, ...',
+              'AWS EKS and GCP GKE'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-source-branch',
+          name: 'GIT',
+          key: 'git',
+          level: 'high',
+          experience: 10,
+          details: {
+            'FR': [
+              'Utilisation quotidienne',
+              'clone, checkout, commit, pull, push, logs, ...',
+              'Rarement : cherry-pick, rebase'
+            ],
+            'EN': [
+              'Daily use',
+              'clone, checkout, commit, pull, push, logs, ...',
+              'Rarely: cherry-pick, rebase'
+            ]
+          }
+        },
+        {
+          categories: ['back'],
+          icon: 'mdi-database-search',
+          name: 'SQL',
+          key: 'sql',
+          level: 'high',
+          experience: 9,
+          details: {
+            'FR': [
+              'Requêtage (direct ou via ORM)',
+              'PostgreSQL, MySQL',
+              'Administration : uniquement les bases',
+              'Optimisation de requêtes'
+            ],
+            'EN': [
+              'Queries (raw or through ORM)',
+              'PostgreSQL, MySQL',
+              'Basic administration knowledge',
+              'Query optimizations'
+            ]
+          }
+        },
+        {
+          categories: ['back'],
+          img: '/img/techs/mongo.jpeg',
+          name: 'MongoDB',
+          key: 'mongodb',
+          level: 'medium',
+          experience: 9,
+          details: {
+            'FR': [
+              'Requêtage (direct ou via ORM)',
+              'MongoAtlas'
+            ],
+            'EN': [
+              'Queries (raw or through ORM)',
+              'MongoAtlas'
             ]
           }
         },
@@ -468,6 +509,23 @@ export default {
             ]
           }
         },
+        {
+          categories: ['back', 'devops'],
+          icon: 'mdi-graph-outline',
+          name: { 'FR': 'Micro-services', 'EN': 'Micro-services' },
+          level: 'medium',
+          key: 'microservices',
+          details: {
+            'FR': [
+              'Bagage théorique (App gateways, transactions, CQRS, DDD)',
+              'Peu d\'expérience pratique'
+            ],
+            'EN': [
+              'Theoretical knowledge (App gateways, transactions, CQRS, DDD)',
+              'Low level of practice'
+            ]
+          }
+        },
       ]
     }
   },
@@ -484,7 +542,21 @@ export default {
         }
         res.push(tech)
       }
-      return res
+      return res.sort(function(a, b) {
+        if (b.level === 'expert') {
+          return 1
+        }
+        if (a.level === 'expert') {
+          return -1
+        }
+        if (b.level === 'high') {
+          return 1
+        }
+        if (a.level === 'high') {
+          return -1
+        }
+        return 0
+      })
     }
   },
   methods: {
@@ -521,6 +593,7 @@ export default {
 
 .tech
   margin-top: 10px
+  padding: 10px 5px
   width: 100%
   display: inline-block
   .v-image
@@ -547,7 +620,7 @@ export default {
   .tech-col
     display: flex
     page-break-inside: avoid !important
-    flex: 0 0 30%
+    flex: 0 0 45%
     justify-content: space-around
     transition: transform 0.8s ease
 
