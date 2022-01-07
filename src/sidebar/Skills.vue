@@ -6,7 +6,7 @@
       class="ma-2"
       light
       color="white"
-      text-color="secondary darken-4"
+      text-color="secondary darken-2"
     >
       <v-avatar left>
         <v-icon>{{ item.icon }}</v-icon>

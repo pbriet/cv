@@ -1,7 +1,9 @@
 export default {
   light: {
-    primary: '#f45595',
-    secondary: '#93E1D8',
+    primary: '#8fcfb1',
+    secondary: '#888',
+    // primary: '#bda7a7',
+    // secondary: '#bbeed6',
     accent: '#f45595',
     info: '#8d8d8d',
     error: '#f45595',
@@ -12,8 +14,10 @@ export default {
     gold: 'D4AF37'
   },
   dark: {
-    primary: '#f45595',
-    secondary: '#93E1D8',
+    primary: '#8fcfb1',
+    secondary: '#888',
+    // primary: '#bda7a7',
+    // secondary: '#bbeed6',
     accent: '#f45595',
     info: '#8d8d8d',
     error: '#f45595',

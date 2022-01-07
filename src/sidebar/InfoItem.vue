@@ -15,7 +15,7 @@
       <div>
         {{ transDict(item.name) }}
       </div>
-      <p class="grey--text">
+      <p class="light_grey--text">
         <span v-if="item.text">
           {{ transDict(item.text) }}
         </span>

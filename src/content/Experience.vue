@@ -7,7 +7,7 @@
       <v-timeline-item
         v-for="experience in experiences"
         :key="transDict(experience.title)"
-        color="secondary darken-4"
+        color="secondary darken-1"
         style="page-break-inside: avoid !important"
         :small="true"
       >
