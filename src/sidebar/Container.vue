@@ -125,8 +125,8 @@ export default {
             },
             {
               name: {
-                'FR': 'Actuellement en poste',
-                'EN': 'Currently working at Apalia'
+                'FR': 'Freelancer en mode forfait',
+                'EN': 'Freelancer'
               },
               icon: 'mdi-calendar'
             }
