@@ -10,8 +10,8 @@ Vue.use(helper)
 new Vue({
     vuetify,
     store,
-    render: (h) => h(App),
     created () {
       this.$store.dispatch('initLang')
-    }
+    },
+    render: (h) => h(App)
 }).$mount('#app')

@@ -19,7 +19,10 @@
           label="Type"
         />
       </v-col>
-      <v-col cols="12" sm="6">
+      <v-col
+        cols="12"
+        sm="6"
+      >
         <v-select
           v-model="levels"
           multiple
@@ -50,7 +53,10 @@
           >
             <v-card-title>
               <v-row justify="center">
-                <v-col :cols="nbColsIcon(detailed)" class="text-center">
+                <v-col
+                  :cols="nbColsIcon(detailed)"
+                  class="text-center"
+                >
                   <v-icon
                     v-if="tech.icon"
                     :large="detailed"
@@ -63,10 +69,13 @@
                     :src="tech.img"
                   />
                 </v-col>
-                <v-col :cols="nbColsTechTitle(detailed)"  class="text-center">
+                <v-col
+                  :cols="nbColsTechTitle(detailed)"
+                  class="text-center"
+                >
                   <span class="tech-title">
                     <template v-if="tech.name.FR">
-                      {{ transDict(tech.name) }}
+                      {{ transDict(tech.name) }}
                     </template>
                     <template v-else>
                       {{ tech.name }}
@@ -196,7 +205,7 @@ export default {
           name: 'VueJS',
           key: 'vuejs',
           level: 'high',
-          experience: 3,
+          experience: 4,
           details: {
             'FR': [
               'Développement de gros projets SPA',
@@ -244,7 +253,7 @@ export default {
           details: {
             'FR': [
               'Longue expérience (jQuery, AngularJS, VueJS, ES6)',
-              'Uniquement côté client (pas de NodeJS)'
+              'Uniquement côté client (peu de NodeJS)'
             ],
             'EN': [
               'Longtime experience (jQuery, AngularJS, VueJS, ES6)',
@@ -325,14 +334,14 @@ export default {
               'Gestion des secrets, GitOPS, best practices',
               'Connaissance des mécanismes internes',
               'Installation de clusters on premise et hybrides',
-              'Helm, Kustomize, Skaffold'
+              'Helm, Kustomize, Skaffold, DevSpace'
             ],
             'EN': [
               'HA deployments',
               'Secret management, GitOps, best practices',
               'Deep understanding of internal mechanisms',
               'On prem/hybrid cluster deployments',
-              'Helm, Kustomize, Skaffold'
+              'Helm, Kustomize, Skaffold, DevSpace'
             ]
           }
         },

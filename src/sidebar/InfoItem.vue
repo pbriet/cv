@@ -17,7 +17,7 @@
       </div>
       <p class="grey--text">
         <span v-if="item.text">
-          {{ transDict(item.text )}}
+          {{ transDict(item.text) }}
         </span>
       </p>
     </v-flex>
@@ -29,9 +29,9 @@
 import I18nMixin from '@/i18nmixin'
 
 export default {
+  name: 'SidebarInfoItem',
   mixins: [I18nMixin],
-  name    : 'SidebarInfoItem',
-  props   : { item: { type: Object, default: () => {} } },
+  props: { item: { type: Object, default: () => {} } },
   computed: {
     hasIcon () {
       return !!this.item.icon

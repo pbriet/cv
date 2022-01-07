@@ -45,6 +45,13 @@
               'EN': 'Devops'
             }
           },
+          {
+            icon: 'mdi-language-javascript',
+            text: {
+              'FR': 'Développeur webapp',
+              'EN': 'Webapp developer'
+            }
+          },
         ]
       }
     }

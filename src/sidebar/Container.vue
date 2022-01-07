@@ -34,8 +34,8 @@
           {{ trans('KEYPOINT_TITLE') }}
         </div>
         <ul>
-          <li v-html="trans('FULLSTACK_DEVELOPER')"></li>
-          <li v-html="trans('DEVOPS')"></li>
+          <li v-html="trans('FULLSTACK_DEVELOPER')"/>
+          <li v-html="trans('DEVOPS')"/>
           <li>{{ trans('SOFTWARE_ARCHITECT') }}</li>
           <li>{{ trans('EXPERIENCE') }}</li>
           <li>{{ trans('ENTREPRENEUR') }}</li>
@@ -86,8 +86,8 @@ import I18nMixin from '@/i18nmixin'
 
 export default {
   name: 'Sidebar',
-  mixins: [I18nMixin],
   components: { SidebarInfos, SidebarSkills, Avatar },
+  mixins: [I18nMixin],
   data () {
     return {
       sections: {

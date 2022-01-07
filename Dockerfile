@@ -1,4 +1,4 @@
-FROM node:13.8.0-alpine as development
+FROM node:16-alpine as development
 
 RUN apk --no-cache  update \
   && apk --no-cache  upgrade \
