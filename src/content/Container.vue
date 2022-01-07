@@ -5,7 +5,7 @@
     light
   >
     <v-card-text id="main-container-card-content">
-      <content-section
+      <content-section v-if="showLookingForSection"
         :title="trans('LOOKING_FOR')"
       >
         <template slot="short-version">
@@ -86,7 +86,8 @@ export default {
   components: { ContentSection, Techs, Experience },
   data () {
     return {
-      'translations': {
+      showLookingForSection: false,
+      translations: {
         TECHNICAL_SKILLS: {
           'FR': 'Compétences techniques',
           'EN': 'Technical skills',
@@ -179,7 +180,7 @@ export default {
             <br><br>
 
             Pour autant, je ne suis pas un perfectionniste, mais un pragmatique. Si les délais sont courts, il faut aller à l'essentiel et faire les sacrifices nécessaires.<br>
-            Quand je m'engage sur une date, je tiens toujours mes délais (peu commun dans le milieu !)
+            Quand je m'engage sur une date, je tiens toujours mes délais
 
             <h3>Forte capacité d'apprentissage</h3>
 
@@ -204,7 +205,7 @@ export default {
             <br><br>
 
             Still, I'm not a perfectionist but a pragmatic developer. If the deadline is short, I won't waste time on details.<br>
-            When I commit myself to a deadline, I always meet the expectations (which is quite rare in the world of developers!)
+            When I commit myself to a deadline, I always meet the expectations.
 
             <h3>Self-learner</h3>
 

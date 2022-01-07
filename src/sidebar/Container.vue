@@ -119,8 +119,8 @@ export default {
               },
               icon: 'mdi-cake-variant',
               text: {
-                'FR': '36 ans - Français',
-                'EN': '36 years old - French'
+                'FR': '37 ans - Français',
+                'EN': '37 years old - French'
               }
             },
             {

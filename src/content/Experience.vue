@@ -104,7 +104,7 @@ export default {
         }
       },
       experiences: [
-        { date: '2020-2021',
+        { date: '2020-2022',
           company: 'Apalia (Annecy)',
           title: 'Kubernetes/Devops consultant',
           shortContent: {
