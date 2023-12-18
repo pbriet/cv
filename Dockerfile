@@ -6,8 +6,6 @@ RUN apk --no-cache  update \
     nginx bash \
   && rm -rf /var/cache/apk/* /tmp/*
 
-RUN npm install -g npm
-
 RUN mkdir /cv /cv/deployment
 WORKDIR /cv/
 

@@ -25,33 +25,19 @@
       return {
         items: [
           {
+            icon: 'mdi-kubernetes',
+            text: {
+              'FR': 'Devops Kubernetes',
+              'EN': 'Kubernetes Devops'
+            }
+          },
+          {
             icon: 'mdi-language-python',
             text: {
-              'FR': 'Développeur backend',
-              'EN': 'Backend developer'
+              'FR': 'Développeur full-stack',
+              'EN': 'Backend full-stack'
             }
-          },
-          {
-            icon: 'mdi-cogs',
-            text: {
-              'FR': 'Architecte web',
-              'EN': 'Web architect'
-            }
-          },
-          {
-            icon: 'mdi-docker',
-            text: {
-              'FR': 'Devops',
-              'EN': 'Devops'
-            }
-          },
-          {
-            icon: 'mdi-language-javascript',
-            text: {
-              'FR': 'Développeur webapp',
-              'EN': 'Webapp developer'
-            }
-          },
+          }
         ]
       }
     }

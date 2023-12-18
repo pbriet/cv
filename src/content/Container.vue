@@ -188,11 +188,7 @@ export default {
 
             Je me suis auto-formé à : Django, VueJS, Ansible, Docker, Kubernetes. Puis j'ai formé les équipes dans lesquelles je travaillais.<br><br>
 
-            Si j'apprécie certains univers (Python, Docker, ...), je suis donc parfaitement ouvert au travail dans d'autres environnements (Java, NodeJS, ...)
-
-            <h3>Leadership horizontal</h3>
-
-            Bien que d'un naturel plutôt discret, j'ai toujours naturellement pris le lead des équipes dans lesquelles j'ai été (et ce, même en télétravail). Je sais organiser, accompagner, écouter, impulser de nouvelles pratiques. J'ai une forte préférence pour les organisations peu hiérarchiques.
+            Si j'apprécie certains univers (Python, Kubernetes, ...), je suis parfaitement ouvert au travail dans d'autres environnements (Java, NodeJS, ...)
           `,
           'EN': `<h3>An entrepreneurial spirit</h3>
 
@@ -213,11 +209,7 @@ export default {
 
             I have self-learned: Django, VueJS, Ansible, Docker, Kubernetes. Once I master a new technology, I also like to share it to my colleagues.<br><br>
 
-            I'm fond of some technologies that I already master (Python, Docker, ...), but I'm open to discover other environments (Java, NodeJS, ...)
-
-            <h3>Horizontal leadership</h3>
-
-            With a rather calm personality, I'm clearly not a chef. But I've always taken the lead in the teams I worked. I'm pretty good at organizing, orchestrating and introducing change.`
+            I'm fond of some technologies that I already master (Python, Kubernetes, ...), but I'm open to discover other environments (Java, NodeJS, ...)`
         }
 
       }

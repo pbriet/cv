@@ -23,10 +23,10 @@
               {{ transDict(experience.shortContent) }}
             </template>
             <template v-else>
-              <div>
+              <div v-if="experience.companyDetails">
                 <span class="exp-title">{{ trans('THE_COMPANY') }}:</span> {{ transDict(experience.companyDetails) }}
               </div>
-              <div class="exp-section">
+              <div class="exp-section" v-if="experience.roles">
                 <div class="exp-title">{{ trans('MY_ROLE') }}:</div>
                 <ul>
                   <li v-for="role in transDict(experience.roles)" :key="role">
@@ -104,6 +104,59 @@ export default {
         }
       },
       experiences: [
+        { date: '2022-',
+          company: 'Freelance (Remote)',
+          title: 'Kubernetes/Devops consultant',
+          shortContent: {
+            'FR': 'Containerisation d\'applications. Pipelines CI/CD. Maintenance de Kubernetes',
+            'EN': 'Application containerisation. CI/CD. Kubernetes maintenance.'
+          },
+          roles: {
+            'FR': [
+              'Consultant Freelance'
+            ],
+            'EN': [
+              'Consultant Freelance'
+            ],
+          },
+          projects: {
+            'FR': [
+              'Accompagnement des développeurs (Containerisation, CI/CD)',
+              'Troubleshooting (erreurs, performance dégradée)',
+              'Paramétrage et maintenance de Kubernetes (Scaleway, Openshift on-prem)',
+              'Observabilité (Grafana, Prometheus, Kibana, FluentD, ...)',
+              'Développements Python/Django'
+            ],
+            'EN': [
+              'Assisting developers on CI/CD, containerization',
+              'Troubleshooting (errors, performance issues)',
+              'Configuring and maitaining Kubernetes clusters (cloud & on-prem)',
+              'Observability (Grafana, Prometheus, Kibana, FluentD, ...)',
+              'Python/Django developments'
+            ]
+          },
+          techs: {
+            'FR': [
+              'Kubernetes : Openshift, Rancher, K3S',
+              'CI/CD : Terraform, Ansible, Gitlab CI, Bamboo, ArgoCD, Tekton',
+              'Docker : docker-compose, podman, buildah, kaniko, optimisations, builds Openshift',
+              'Divers : Traefik, Nginx, Haproxy'
+            ],
+            'EN': [
+              'Kubernetes : Openshift, Rancher, K3S',
+              'CI/CD : Terraform, Ansible, Gitlab CI, Bamboo, ArgoCD, Tekton',
+              'Docker : docker-compose, podman, buildah, kaniko, optimisations, builds Openshift',
+              'Miscellaneous : Traefik, Nginx, Haproxy'
+            ],
+          },
+          // links: [
+          //   { label: {'FR': 'Apalia', 'EN': 'Apalia'}, url: 'https://www.apalia.net' }
+          // ],
+          tags: {
+            'FR': ['Devops', 'Kubernetes', 'Python/Django'],
+            'EN': ['Devops', 'Kubernetes', 'Python/Django']
+          }
+        },
         { date: '2020-2022',
           company: 'Apalia (Annecy)',
           title: 'Kubernetes/Devops consultant',

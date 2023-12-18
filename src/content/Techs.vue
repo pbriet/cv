@@ -128,15 +128,15 @@ export default {
         TECH_TYPE_CHOICES: {
           'FR': [
             { value: 'all', label: 'Toutes' },
+            { value: 'devops', label: 'DevOps / Ops' },
             { value: 'back', label: 'Backend' },
-            { value: 'front', label: 'Frontend' },
-            { value: 'devops', label: 'DevOps / Ops' }
+            { value: 'front', label: 'Frontend' }
           ],
           'EN': [
             { value: 'all', label: 'All' },
+            { value: 'devops', label: 'DevOps / Ops' },
             { value: 'back', label: 'Backend' },
-            { value: 'front', label: 'Frontend' },
-            { value: 'devops', label: 'DevOps / Ops' }
+            { value: 'front', label: 'Frontend' }
           ],
         },
         LEVEL_CHOICES: {
@@ -156,12 +156,116 @@ export default {
       levels: ['expert', 'high'],
       techs: [
         {
+          categories: ['devops'],
+          icon: 'mdi-kubernetes',
+          name: 'Kubernetes',
+          key: 'kubernetes',
+          level: 'expert',
+          experience: 5,
+          details: {
+            'FR': [
+              'Déploiement de charges en HA',
+              'Gestion des secrets, GitOPS, best practices',
+              'Connaissance des mécanismes internes',
+              'Installation de clusters on premise et hybrides',
+              'Helm, Kustomize, DevSpace'
+            ],
+            'EN': [
+              'HA deployments',
+              'Secret management, GitOps, best practices',
+              'Deep understanding of internal mechanisms',
+              'On prem/hybrid cluster deployments',
+              'Helm, Kustomize, DevSpace'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-docker',
+          name: 'Docker',
+          key: 'docker',
+          level: 'expert',
+          experience: 7,
+          details: {
+            'FR': [
+              'Docker-compose, Podman',
+              'Volumes, réseaux',
+              'Best practices',
+              'Multi-stage builds, optimisations, ...'
+            ],
+            'EN': [
+              'Docker-compose, Podman',
+              'Volumes, networks',
+              'Best practices',
+              'Multi-stage builds, optimizations, ...'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-cloud-refresh',
+          name: { 'FR': 'CI/CD', 'EN': 'CI/CD' },
+          level: 'high',
+          experience: 4,
+          key: 'cicd',
+          details: {
+            'FR': [
+              'Gitlab CI, Bamboo',
+              'ArgoCD, Tekton',
+              'Nexus', 'Vault'
+            ],
+            'EN': [
+              'Gitlab CI, Bamboo',
+              'ArgoCD, Tekton',
+              'Nexus', 'Vault'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-git',
+          name: { 'FR': 'GitOPS', 'EN': 'GitOPS' },
+          level: 'high',
+          experience: 2,
+          key: 'gitops',
+          details: {
+            'FR': [
+              'PoC GitOps de déploiement applicatif',
+              'ArgoCD, câblage de la CI/CD',
+              'Gestion des secrets avec Hashicorp Vault'
+            ],
+            'EN': [
+              'GitOps deployments Proof of concept',
+              'ArgoCD, with continuous integration',
+              'Secrets handling with Hashicorp Vault'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          icon: 'mdi-ansible',
+          name: 'Ansible',
+          key: 'ansible',
+          level: 'high',
+          experience: 9,
+          details: {
+            'FR': [
+              'Déploiement de projets applicatifs',
+              'Rôles, templates, handlers'
+            ],
+            'EN': [
+              'Application deployments',
+              'Roles, templates, handlers'
+            ]
+          }
+        },
+        {
           categories: ['back'],
           icon: 'mdi-language-python',
           name: 'Python',
           key: 'python',
           level: 'expert',
-          experience: 13,
+          experience: 15,
           details: {
             'FR': [
               '100% orienté objet',
@@ -183,7 +287,7 @@ export default {
           name: 'Django',
           key: 'django',
           level: 'expert',
-          experience: 7,
+          experience: 9,
           details: {
             'FR': [
               'API REST',
@@ -205,7 +309,7 @@ export default {
           name: 'VueJS',
           key: 'vuejs',
           level: 'high',
-          experience: 4,
+          experience: 5,
           details: {
             'FR': [
               'Développement de gros projets SPA',
@@ -281,85 +385,21 @@ export default {
         },
         {
           categories: ['devops'],
-          icon: 'mdi-cloud-refresh',
-          name: { 'FR': 'CI/CD', 'EN': 'CI/CD' },
-          level: 'high',
+          icon: 'mdi-chart-bell-curve-cumulative',
+          name:  { 'FR': 'Observabilité', 'EN': 'Observability' },
+          key: 'observability',
+          level: 'medium',
           experience: 2,
-          key: 'cicd',
           details: {
             'FR': [
-              'Gitlab CI, Bamboo',
-              'ArgoCD, Tekton',
-              'Nexus', 'Vault'
+              'Prometheus, Thanos, Grafana',
+              'FluentD, ElasticSearch, Kibana',
+              'OpenTelemetry'
             ],
             'EN': [
-              'Gitlab CI, Bamboo',
-              'ArgoCD, Tekton',
-              'Nexus', 'Vault'
-            ]
-          }
-        },
-        {
-          categories: ['devops'],
-          icon: 'mdi-docker',
-          name: 'Docker',
-          key: 'docker',
-          level: 'expert',
-          experience: 5,
-          details: {
-            'FR': [
-              'Docker-compose, Podman, Buildah',
-              'Volumes, réseaux',
-              'Best practices',
-              'Multi-stage builds, optimisations, ...'
-            ],
-            'EN': [
-              'Docker-compose, Podman, Buildah',
-              'Volumes, networks',
-              'Best practices',
-              'Multi-stage builds, optimizations, ...'
-            ]
-          }
-        },
-        {
-          categories: ['devops'],
-          icon: 'mdi-kubernetes',
-          name: 'Kubernetes',
-          key: 'kubernetes',
-          level: 'expert',
-          experience: 3,
-          details: {
-            'FR': [
-              'Déploiement de charges en HA',
-              'Gestion des secrets, GitOPS, best practices',
-              'Connaissance des mécanismes internes',
-              'Installation de clusters on premise et hybrides',
-              'Helm, Kustomize, Skaffold, DevSpace'
-            ],
-            'EN': [
-              'HA deployments',
-              'Secret management, GitOps, best practices',
-              'Deep understanding of internal mechanisms',
-              'On prem/hybrid cluster deployments',
-              'Helm, Kustomize, Skaffold, DevSpace'
-            ]
-          }
-        },
-        {
-          categories: ['devops'],
-          icon: 'mdi-ansible',
-          name: 'Ansible',
-          key: 'ansible',
-          level: 'high',
-          experience: 7,
-          details: {
-            'FR': [
-              'Déploiement de projets iso dev/staging/prod',
-              'Rôles, templates, handlers'
-            ],
-            'EN': [
-              'Multi-environment deployments (dev/staging/prod)',
-              'Roles, templates, handlers'
+              'Prometheus, Thanos, Grafana',
+              'FluentD, ElasticSearch, Kibana',
+              'OpenTelemetry'
             ]
           }
         },
@@ -369,7 +409,7 @@ export default {
           name: 'Linux',
           key: 'linux',
           level: 'high',
-          experience: 10,
+          experience: 12,
           details: {
             'FR': [
               'Administration : utilisateurs, SSH, sudoers',
@@ -390,7 +430,7 @@ export default {
           name: 'Reverse Proxy',
           key: 'reverseproxy',
           level: 'high',
-          experience: 6,
+          experience: 8,
           details: {
             'FR': [
               'Nginx, Traefik, HaProxy',
@@ -427,16 +467,16 @@ export default {
           icon: 'mdi-cloud',
           name: { 'FR': 'Cloud', 'EN': 'Cloud' },
           level: 'medium',
-          experience: 2,
+          experience: 3,
           key: 'cloud',
           details: {
             'FR': [
               'AWS : VPC, networks, gateways, security groups, ...',
-              'AWS EKS et GCP GKE'
+              'AWS EKS, GCP GKE, Scaleway'
             ],
             'EN': [
               'AWS : VPC, networks, gateways, security groups, ...',
-              'AWS EKS and GCP GKE'
+              'AWS EKS, GCP GKE, Scaleway'
             ]
           }
         },
@@ -446,7 +486,7 @@ export default {
           name: 'GIT',
           key: 'git',
           level: 'high',
-          experience: 10,
+          experience: 12,
           details: {
             'FR': [
               'Utilisation quotidienne',
@@ -466,7 +506,7 @@ export default {
           name: 'SQL',
           key: 'sql',
           level: 'high',
-          experience: 9,
+          experience: 11,
           details: {
             'FR': [
               'Requêtage (direct ou via ORM)',
@@ -488,7 +528,7 @@ export default {
           name: 'MongoDB',
           key: 'mongodb',
           level: 'medium',
-          experience: 9,
+          experience: 11,
           details: {
             'FR': [
               'Requêtage (direct ou via ORM)',
@@ -527,10 +567,12 @@ export default {
           details: {
             'FR': [
               'Bagage théorique (App gateways, transactions, CQRS, DDD)',
+              'Cas d\'usage : Pattern ou anti-pattern ?',
               'Peu d\'expérience pratique'
             ],
             'EN': [
               'Theoretical knowledge (App gateways, transactions, CQRS, DDD)',
+              'Use cases: Pattern or anti-pattern ?',
               'Low level of practice'
             ]
           }

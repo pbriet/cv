@@ -34,8 +34,8 @@
           {{ trans('KEYPOINT_TITLE') }}
         </div>
         <ul>
-          <li v-html="trans('FULLSTACK_DEVELOPER')"/>
           <li v-html="trans('DEVOPS')"/>
+          <li v-html="trans('FULLSTACK_DEVELOPER')"/>
           <li>{{ trans('SOFTWARE_ARCHITECT') }}</li>
           <li>{{ trans('EXPERIENCE') }}</li>
           <li>{{ trans('ENTREPRENEUR') }}</li>
@@ -96,8 +96,8 @@ export default {
           items: [
             {
               name: {
-                'FR': 'Annecy (Haute-savoie)',
-                'EN': 'Annecy (France, Haute-savoie)'
+                'FR': 'Ancenis (Loire-Atlantique)',
+                'EN': 'Ancenis (France, Loire-Atlantique)'
               },
               text: {
                 'FR': 'Permis A',
@@ -119,13 +119,13 @@ export default {
               },
               icon: 'mdi-cake-variant',
               text: {
-                'FR': '37 ans - Français',
-                'EN': '37 years old - French'
+                'FR': '38 ans - Français',
+                'EN': '38 years old - French'
               }
             },
             {
               name: {
-                'FR': 'Freelancer en mode forfait',
+                'FR': 'Freelance',
                 'EN': 'Freelancer'
               },
               icon: 'mdi-calendar'
@@ -135,7 +135,7 @@ export default {
       },
       translations: {
         SUBTITLE: {
-          'FR': 'Ingénieur Dev/Devops',
+          'FR': 'Ingénieur Devops/Dev',
           'EN': 'Full-stack web engineer, Devops'
         },
         KEYPOINT_TITLE: {
@@ -147,8 +147,8 @@ export default {
           'EN': 'Main skills'
         },
         FULLSTACK_DEVELOPER: {
-          'FR': 'Développeur <b>full-stack</b>',
-          'EN': '<b>Full stack</b> developer'
+          'FR': 'Développeur <b>full-stack</b> Python/Django/JS',
+          'EN': '<b>Full stack</b> developer (Python/Django/JS)'
         },
         DEVOPS: {
           'FR': 'Ingénieur <b>Devops</b> - Kubernetes',
@@ -159,8 +159,8 @@ export default {
           'EN': 'Software architect'
         },
         EXPERIENCE: {
-          'FR': '14 ans d\'expérience',
-          'EN': '14 years experience'
+          'FR': '16 ans d\'expérience',
+          'EN': '16 years experience'
         },
         ENTREPRENEUR: {
           'FR': 'Esprit d\'entrepreneur',
