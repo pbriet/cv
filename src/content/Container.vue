@@ -8,10 +8,10 @@
       <content-section v-if="showLookingForSection"
         :title="trans('LOOKING_FOR')"
       >
-        <template slot="short-version">
+        <template v-slot:short-version>
           <div v-html="trans('LOOKING_FOR_SHORT')"/>
         </template>
-        <template slot="long-version">
+        <template v-slot:long-version>
           <div v-html="trans('LOOKING_FOR_LONG')"/>
         </template>
       </content-section>
@@ -30,14 +30,13 @@
       <content-section
         :title="trans('HUMAN_SKILLS')"
       >
-        <template slot="short-version">
+        <template v-slot:short-version>
           <div v-html="trans('HUMAN_SKILLS_SHORT')"/>
         </template>
-        <template slot="long-version">
+        <template v-slot:long-version>
           <div v-html="trans('HUMAN_SKILLS_LONG')"/>
         </template>
       </content-section>
-
 
       <content-section
         id="experience-list"
@@ -56,15 +55,19 @@
         mono-slot
         :toggleButton="false"
       >
-        <template>
+        <template v-slot:default>
 
           <v-container>
-            <v-card id="education-card">
-              <v-card-text>
-                <v-icon size="large">mdi-certificate</v-icon> <b>{{ trans('EDUCATION_MAIN') }}</b><br>
-                <div v-html="trans('EDUCATION_DETAILS')"></div>
-              </v-card-text>
-            </v-card>
+            <v-row>
+              <v-col>
+                <v-card id="education-card">
+                  <v-card-text>
+                    <v-icon size="large">mdi-certificate</v-icon> <b>{{ trans('EDUCATION_MAIN') }}</b><br>
+                    <div v-html="trans('EDUCATION_DETAILS')"></div>
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
           </v-container>
 
         </template>

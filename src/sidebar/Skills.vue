@@ -5,6 +5,8 @@
       :key="item.icon"
       class="ma-2"
       theme="light"
+      variant="elevated"
+      color="white"
     >
       <v-avatar start>
         <v-icon>{{ item.icon }}</v-icon>
