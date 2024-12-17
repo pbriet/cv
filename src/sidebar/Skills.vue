@@ -4,7 +4,7 @@
       v-for="item in items"
       :key="item.icon"
       class="ma-2"
-      color="white"
+      theme="light"
     >
       <v-avatar start>
         <v-icon>{{ item.icon }}</v-icon>

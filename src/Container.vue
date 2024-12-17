@@ -101,7 +101,7 @@ export default {
 </style>
 
 <style lang="sass">
-body, .v-card__subtitle, .v-card__text
+body, .v-card-subtitle, .v-card-text
     font-size: 0.95rem
     line-height: 1.4rem
 

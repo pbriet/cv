@@ -17,6 +17,7 @@
           item-title="label"
           item-value="value"
           label="Type"
+          variant="underlined"
         />
       </v-col>
       <v-col
@@ -27,11 +28,19 @@
           v-model="levels"
           multiple
           chips
+          chip-size="default"
+          variant="underlined"
           :items="trans('LEVEL_CHOICES')"
           item-title="label"
           item-value="value"
           :label="trans('LEVEL')"
-        />
+        >
+          <template v-slot:chip="item">
+            <v-chip size="large">
+              <span>{{ item.item.title }}</span>
+            </v-chip>
+          </template>
+        </v-select>
       </v-col>
     </v-row>
     <v-container
@@ -638,9 +647,8 @@ export default {
 #tech-filters
   .v-select
     max-height: 40px
-
-#tech-type-select-col
-  padding-top: 21px
+    padding-top: 10px
+    padding-bottom: 45px
 
 .tech
   margin-top: 10px
