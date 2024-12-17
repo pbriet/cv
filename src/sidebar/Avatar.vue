@@ -1,19 +1,16 @@
 <template>
   <div class="text-md-center">
     <v-avatar
-      color="grey lighten-4"
+      color="grey-lighten-4"
       size="120"
+      :image="publicPath('/img/avatar.jpg')"
     >
-      <img
-        :src="publicPath('/img/avatar.jpg')"
-        alt="Pascal BRIET"
-      >
     </v-avatar>
   </div>
 </template>
 
 <script>
-export default { name: 'Avatar' }
+export default { name: 'SidebarAvatar' }
 </script>
 
 <style scoped>

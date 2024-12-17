@@ -5,15 +5,15 @@
     class="content-section"
   >
     <v-card-title>
-      <div class="title">
+      <div class="text-h6">
         <div class="d-flex justify-space-between align-end">
-          <h3 class="mb-1 primary--text text--darken-2">
+          <h3 class="mb-1 text-primary-darken-2">
             {{ title }}
           </h3>
           <v-switch
             v-if="toggleButton"
             v-model="detailed"
-            dense
+            density="compact"
             class="title-switch d-none d-sm-flex d-print-none"
             :label="detailed ? trans('LONG_VERSION') : trans('SHORT_VERSION')"
           />
@@ -22,7 +22,7 @@
       <v-switch
         v-if="toggleButton"
         v-model="detailed"
-        dense
+        density="compact"
         class="title-switch title-switch-xs d-sm-none d-print-none"
         :label="detailed ? trans('LONG_VERSION') : trans('SHORT_VERSION')"
       />
@@ -81,7 +81,7 @@ export default {
 
 <style lang="sass">
 .content-section
-  .title
+  .text-h6
     border-bottom: 2px #bfbfbf solid
     width: 100%
 

@@ -14,7 +14,7 @@
         <v-select
           v-model="techTypes"
           :items="trans('TECH_TYPE_CHOICES')"
-          item-text="label"
+          item-title="label"
           item-value="value"
           label="Type"
         />
@@ -28,7 +28,7 @@
           multiple
           chips
           :items="trans('LEVEL_CHOICES')"
-          item-text="label"
+          item-title="label"
           item-value="value"
           :label="trans('LEVEL')"
         />
@@ -59,8 +59,8 @@
                 >
                   <v-icon
                     v-if="tech.icon"
-                    :large="detailed"
-                    left
+                    :size="detailed ? 'large' : ''"
+                    start
                   >
                     {{ tech.icon }}
                   </v-icon>
@@ -87,14 +87,14 @@
 
             <v-card-text>
               <div v-if="tech.experience">
-                <div class="headline">
+                <div class="text-h5">
                   {{ tech.experience }} {{ trans('YEARS') }}
                 </div>
               </div>
               <div v-if="tech.details" class="tech-details">
                 <ul>
                   <li v-for="detail in transDict(tech.details)" :key="detail">
-                    {{ detail }}
+                    {{ detail }}
                   </li>
                 </ul>
               </div>
@@ -111,7 +111,7 @@
 import I18nMixin from '@/i18nmixin'
 
 export default {
-  name: 'Techs',
+  name: 'ContentTechs',
   mixins: [I18nMixin],
   props: ['detailed'],
   data () {
@@ -647,7 +647,7 @@ export default {
   padding: 10px 5px
   width: 100%
   display: inline-block
-  .v-image
+  .v-img
     max-width: 36px
     max-height: 36px
     margin-left: 5px
@@ -678,15 +678,18 @@ export default {
   &.small-techs
     .tech-col
       flex: 0 0 15%
-      .v-card__title
+      .v-card-title
         font-size: 0.8em
         line-height: 0.8em
         padding: 2px
-      .v-card__text
+      .v-card-text
         display: none
-      .v-image
-        max-width: 24px
-        max-height: 24px
+      .v-img
+        width: 24px
+        height: 24px
+      .mdi
+        font-size: 24px
+        color: rgba(0,0,0,.54)
 
 
   @media screen and (max-width: 640px)
@@ -696,7 +699,7 @@ export default {
       flex: 0 0 30%
 
   &:not(.small-techs)
-    .v-card__title
+    .v-card-title
       height: 80px
 
 

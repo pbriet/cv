@@ -4,11 +4,9 @@
       v-for="item in items"
       :key="item.icon"
       class="ma-2"
-      light
       color="white"
-      text-color="secondary darken-2"
     >
-      <v-avatar left>
+      <v-avatar start>
         <v-icon>{{ item.icon }}</v-icon>
       </v-avatar>
       {{ transDict(item.text) }}
@@ -21,6 +19,7 @@
 
   export default {
     mixins: [I18nMixin],
+    name: 'SidebarSkills',
     data () {
       return {
         items: [

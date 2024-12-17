@@ -30,30 +30,30 @@
           fluid
           fill-height
         >
-          <v-layout
-            align-center
-            justify-center
+          <v-row
+            align="center"
+            justify="center"
           >
-            <v-flex
-              lg10
-              sm12
+            <v-col
+              lg="10"
+              sm="12"
             >
-              <v-layout wrap>
-                <v-flex
-                  sm4
+              <v-row no-gutters>
+                <v-col
+                  sm="4"
                   id="sidebar-column"
                 >
                   <sidebar-container class="fill-height" />
-                </v-flex>
-                <v-flex
-                  sm8
+                </v-col>
+                <v-col
+                  sm="8"
                   id="content-column"
                 >
                   <content-container class="fill-height" />
-                </v-flex>
-              </v-layout>
-            </v-flex>
-          </v-layout>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
         </v-container>
       </v-main>
     </v-fade-transition>

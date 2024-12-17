@@ -1,8 +1,8 @@
 <template>
   <v-card
+    theme="custom-dark"
     id="sidebar"
-    color="primary darken-3"
-    dark
+    color="primary-darken-3"
   >
     <v-card-text>
       <avatar />
@@ -16,21 +16,21 @@
       </div>
 
       <div class="mb-4">
-        <div class="title mb-3">
+        <div class="text-h6 mb-3">
           Infos
         </div>
         <sidebar-infos :options="sections.info" />
       </div>
 
       <div class="mb-4">
-        <div class="title mb-3">
+        <div class="text-h6 mb-3">
           {{ trans('PROFILE_TITLE') }}
         </div>
         <sidebar-skills />
       </div>
 
       <div class="mb-4">
-        <div class="title mb-3">
+        <div class="text-h6 mb-3">
           {{ trans('KEYPOINT_TITLE') }}
         </div>
         <ul>
@@ -47,7 +47,7 @@
 
 
       <div class="mb-4">
-        <div class="title mb-3">
+        <div class="text-h6 mb-3">
           {{ trans('HOBBIES') }}
         </div>
         <v-row>
@@ -68,7 +68,7 @@
       </div>
 
       <div class="mb-4">
-        <div class="title mb-3">
+        <div class="text-h6 mb-3">
           {{ trans('LANGUAGES') }}
         </div>
         {{ trans('FRENCH') }}<br>
@@ -85,7 +85,7 @@ import SidebarSkills from '@/sidebar/Skills'
 import I18nMixin from '@/i18nmixin'
 
 export default {
-  name: 'Sidebar',
+  name: 'SidebarContainer',
   components: { SidebarInfos, SidebarSkills, Avatar },
   mixins: [I18nMixin],
   data () {
@@ -217,7 +217,7 @@ export default {
 #sidebar
   color: white
 
-.title
+.text-h6
   border-bottom: 2px #bfbfbf solid
   font-weight: 300
   line-height: 1.5 !important

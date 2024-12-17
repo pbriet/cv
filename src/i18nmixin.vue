@@ -5,6 +5,7 @@
 import Vue from 'vue'
 
 export default {
+  name: "i18nMixin",
   computed: {
     lang () {
       return this.$store.state.lang

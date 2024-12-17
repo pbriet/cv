@@ -1,18 +1,18 @@
 <template>
   <div>
     <v-timeline
-      dense
-      align-top
+      density="compact"
+      align="start"
     >
       <v-timeline-item
         v-for="experience in experiences"
         :key="transDict(experience.title)"
-        color="secondary darken-1"
+        dot-color="secondary-darken-1"
         style="page-break-inside: avoid !important"
-        :small="true"
+        size="small"
       >
         <v-card class="elevation-2">
-          <v-card-title class="headline">
+          <v-card-title class="text-h5">
             {{ experience.company }}
           </v-card-title>
           <v-card-subtitle>
@@ -80,7 +80,7 @@
 import I18nMixin from '@/i18nmixin'
 
 export default {
-  name: 'Experience',
+  name: 'ContentExperience',
   mixins: [I18nMixin],
   props: ['detailed'],
   data () {
@@ -463,13 +463,13 @@ export default {
 </script>
 
 <style scoped lang="sass">
-  .exp-title
-    font-weight: bold
-  .exp-section
-    padding-top: 10px
+.exp-title
+  font-weight: bold
+.exp-section
+  padding-top: 10px
 </style>
 
 <style lang="sass">
-  .v-timeline-item__dot
-    margin-top: 10px
+.v-timeline-item__dot
+  margin-top: 10px
 </style>

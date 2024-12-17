@@ -1,7 +1,7 @@
 <template>
   <v-card
     id="main-container"
-    color="grey lighten-2"
+    color="grey-lighten-2"
     light
   >
     <v-card-text id="main-container-card-content">
@@ -61,7 +61,7 @@
           <v-container>
             <v-card id="education-card">
               <v-card-text>
-                <v-icon large>mdi-certificate</v-icon> <b>{{ trans('EDUCATION_MAIN') }}</b><br>
+                <v-icon size="large">mdi-certificate</v-icon> <b>{{ trans('EDUCATION_MAIN') }}</b><br>
                 <div v-html="trans('EDUCATION_DETAILS')"></div>
               </v-card-text>
             </v-card>
@@ -222,7 +222,7 @@ export default {
 
 <style lang="sass">
 #main-container-card-content
-  .title
+  .text-h6
     border-bottom: 2px #bfbfbf solid
     line-height: 1.5 !important
 

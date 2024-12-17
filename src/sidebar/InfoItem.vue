@@ -1,27 +1,26 @@
 <template>
-  <v-layout>
-    <v-flex
+  <v-row>
+    <v-col
       v-if="hasIcon"
-      xs2
+      cols="2"
     >
       <v-icon>
         {{ item.icon }}
       </v-icon>
-    </v-flex>
-    <v-flex
-      :xs10="hasIcon"
-      :xs12="!hasIcon"
+    </v-col>
+    <v-col
+      :cols="hasIcon ? 10 : 12"
     >
       <div>
         {{ transDict(item.name) }}
       </div>
-      <p class="light_grey--text">
+      <p class="light-grey-text">
         <span v-if="item.text">
           {{ transDict(item.text) }}
         </span>
       </p>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

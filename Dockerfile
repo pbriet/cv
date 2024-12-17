@@ -1,4 +1,4 @@
-FROM node:16-alpine as development
+FROM node:22-alpine AS development
 
 RUN apk --no-cache  update \
   && apk --no-cache  upgrade \
@@ -10,7 +10,7 @@ RUN mkdir /cv /cv/deployment
 WORKDIR /cv/
 
 COPY package.json /cv/
-RUN cd /cv && yarn install
+RUN cd /cv && npm install
 
 COPY .* *.config.js /cv/
 COPY src /cv/src
