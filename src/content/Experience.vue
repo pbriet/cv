@@ -58,6 +58,18 @@
                   </li>
                 </ul>
               </div>
+            <div class="exp-customers" v-if="experience.customers">
+              <br/>
+              <div class="exp-title">{{ trans('CUSTOMERS') }}:</div>
+              <ul>
+                  <li v-for="cust in experience.customers" :key="cust.name">
+                    {{ cust.name }}
+                    <v-chip variant="outlined" size="x-small" color="secondary">
+                      {{ cust.sector }}
+                    </v-chip>
+                  </li>
+                </ul>
+            </div>
             </template>
             <div class="exp-tags" v-if="experience.tags">
               <v-chip
@@ -101,6 +113,10 @@ export default {
         'MORE_ABOUT': {
           'FR': "Pour en savoir plus ",
           'EN': "More about this experience"
+        },
+        'CUSTOMERS': {
+          'FR': "Clients",
+          'EN': "Customers"
         }
       },
       experiences: [
@@ -123,7 +139,7 @@ export default {
             'FR': [
               'Accompagnement des développeurs (Containerisation, CI/CD)',
               'Troubleshooting (erreurs, performance dégradée)',
-              'Paramétrage et maintenance de Kubernetes (Scaleway, Openshift on-prem)',
+              'Paramétrage et maintenance de Kubernetes (Scaleway, Openshift on-prem, Talos)',
               'Observabilité (Grafana, Prometheus, Kibana, FluentD, ...)',
               'Développements Python/Django'
             ],
@@ -137,13 +153,13 @@ export default {
           },
           techs: {
             'FR': [
-              'Kubernetes : Openshift, Rancher, K3S',
+              'Kubernetes : Openshift, Rancher, Talos Linux',
               'CI/CD : Terraform, Ansible, Gitlab CI, Bamboo, ArgoCD, Tekton',
               'Docker : docker-compose, podman, buildah, kaniko, optimisations, builds Openshift',
               'Divers : Traefik, Nginx, Haproxy'
             ],
             'EN': [
-              'Kubernetes : Openshift, Rancher, K3S',
+              'Kubernetes : Openshift, Rancher, Talos Linux',
               'CI/CD : Terraform, Ansible, Gitlab CI, Bamboo, ArgoCD, Tekton',
               'Docker : docker-compose, podman, buildah, kaniko, optimisations, builds Openshift',
               'Miscellaneous : Traefik, Nginx, Haproxy'
@@ -155,17 +171,23 @@ export default {
           tags: {
             'FR': ['Devops', 'Kubernetes', 'Python/Django'],
             'EN': ['Devops', 'Kubernetes', 'Python/Django']
-          }
+          },
+          customers: [
+            {'name': 'TPG', 'sector': 'Transports publics'},
+            {'name': 'Cogedis', 'sector': 'Comptabilité'},
+            {'name': 'Requea', 'sector': 'IoT'},
+            {'name': 'Les Octets Libres', 'sector': 'ESN'}
+          ]
         },
         { date: '2020-2022',
-          company: 'Apalia (Annecy)',
+          company: 'Apalia (Annecy) - I-Tracing',
           title: 'Kubernetes/Devops consultant',
           shortContent: {
             'FR': 'Installation de clusters Openshift. Mise en place en pipelines CI/CD. Veille technologique sur multiples sujets.',
             'EN': 'Installation of Openshift clusters. Setting up CI/CD pipelines. Technology intelligence.'
           },
           companyDetails: {
-            'FR': 'Petite entreprise de consulting haut de gamme sur Kubernetes et les pratiques DevOps',
+            'FR': 'Petite entreprise de consulting haut de gamme sur Kubernetes et les pratiques DevOps (rachetée par I-Tracing)',
             'EN': 'Providing highly-skilled consultants for adopting Kubernetes/Devops practices'
           },
           roles: {

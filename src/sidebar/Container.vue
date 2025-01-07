@@ -36,7 +36,7 @@
         <ul>
           <li v-html="trans('DEVOPS')"/>
           <li v-html="trans('FULLSTACK_DEVELOPER')"/>
-          <li>{{ trans('SOFTWARE_ARCHITECT') }}</li>
+          <li>{{ trans('DEVOPS_SKILLS') }}</li>
           <li>{{ trans('EXPERIENCE') }}</li>
           <li>{{ trans('ENTREPRENEUR') }}</li>
           <li>{{ trans('PRAGMATIC') }}</li>
@@ -119,8 +119,8 @@ export default {
               },
               icon: 'mdi-cake-variant',
               text: {
-                'FR': '38 ans - Français',
-                'EN': '38 years old - French'
+                'FR': '40 ans - Français',
+                'EN': '40 years old - French'
               }
             },
             {
@@ -135,8 +135,8 @@ export default {
       },
       translations: {
         SUBTITLE: {
-          'FR': 'Ingénieur Devops/Dev',
-          'EN': 'Full-stack web engineer, Devops'
+          'FR': 'Ingénieur Devops',
+          'EN': 'Devops Engineer'
         },
         KEYPOINT_TITLE: {
           'FR': 'Points clés',
@@ -147,20 +147,20 @@ export default {
           'EN': 'Main skills'
         },
         FULLSTACK_DEVELOPER: {
-          'FR': 'Développeur <b>full-stack</b> Python/Django/JS',
-          'EN': '<b>Full stack</b> developer (Python/Django/JS)'
+          'FR': 'Ex - Développeur <b>full-stack</b> Python/Django/JS',
+          'EN': 'Prev: <b>Full stack</b> developer (Python/Django/JS)'
         },
         DEVOPS: {
           'FR': 'Ingénieur <b>Devops</b> - Kubernetes',
           'EN': '<b>Devops</b> Engineer - Kubernetes'
         },
-        SOFTWARE_ARCHITECT: {
-          'FR': 'Architecte logiciel',
-          'EN': 'Software architect'
+        DEVOPS_SKILLS: {
+          'FR': 'Containerisation, migrations, DevSecOps, CI/CD',
+          'EN': 'Containerization, migrations, DevSecOps, CI/CD'
         },
         EXPERIENCE: {
-          'FR': '16 ans d\'expérience',
-          'EN': '16 years experience'
+          'FR': '18 ans d\'expérience',
+          'EN': '18 years experience'
         },
         ENTREPRENEUR: {
           'FR': 'Esprit d\'entrepreneur',

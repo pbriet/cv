@@ -170,17 +170,17 @@ export default {
           name: 'Kubernetes',
           key: 'kubernetes',
           level: 'expert',
-          experience: 5,
+          experience: 7,
           details: {
             'FR': [
-              'Déploiement de charges en HA',
+              'Containerisation et déploiements',
               'Gestion des secrets, GitOPS, best practices',
               'Connaissance des mécanismes internes',
               'Installation de clusters on premise et hybrides',
               'Helm, Kustomize, DevSpace'
             ],
             'EN': [
-              'HA deployments',
+              'Containerization & deployments',
               'Secret management, GitOps, best practices',
               'Deep understanding of internal mechanisms',
               'On prem/hybrid cluster deployments',
@@ -190,23 +190,63 @@ export default {
         },
         {
           categories: ['devops'],
+          img: '/img/techs/openshift.svg',
+          name: 'Openshift',
+          key: 'openshift',
+          level: 'expert',
+          experience: 5,
+          details: {
+            'FR': [
+              'Administration de clusters',
+              'Routes & ingress controllers',
+              'CLI oc'
+            ],
+            'EN': [
+              'Cluster administration',
+              'Routes & ingress controllers',
+              'CLI oc'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
+          img: '/img/techs/talos-linux.webp',
+          name: 'Talos linux',
+          key: 'talos-linux',
+          level: 'high',
+          experience: 1,
+          details: {
+            'FR': [
+              'Installation de clusters via Terraform',
+              'Gestion du cycle de vie (upgrades Talos & K8S)',
+              'Troubleshooting'
+            ],
+            'EN': [
+              'Cluster installation with Terraform',
+              'Lifecycle management (Talos & K8S upgrades)',
+              'Troubleshooting'
+            ]
+          }
+        },
+        {
+          categories: ['devops'],
           icon: 'mdi-docker',
           name: 'Docker',
           key: 'docker',
           level: 'expert',
-          experience: 7,
+          experience: 9,
           details: {
             'FR': [
-              'Docker-compose, Podman',
+              'Docker-compose, Podman, Kaniko',
               'Volumes, réseaux',
               'Best practices',
-              'Multi-stage builds, optimisations, ...'
+              'Multi-stage builds, optimisations, sécurité, ...'
             ],
             'EN': [
               'Docker-compose, Podman',
               'Volumes, networks',
               'Best practices',
-              'Multi-stage builds, optimizations, ...'
+              'Multi-stage builds, optimizations, security, ...'
             ]
           }
         },
@@ -214,18 +254,18 @@ export default {
           categories: ['devops'],
           icon: 'mdi-cloud-refresh',
           name: { 'FR': 'CI/CD', 'EN': 'CI/CD' },
-          level: 'high',
-          experience: 4,
+          level: 'expert',
+          experience: 6,
           key: 'cicd',
           details: {
             'FR': [
               'Gitlab CI, Bamboo',
-              'ArgoCD, Tekton',
+              'ArgoCD',
               'Nexus', 'Vault'
             ],
             'EN': [
               'Gitlab CI, Bamboo',
-              'ArgoCD, Tekton',
+              'ArgoCD',
               'Nexus', 'Vault'
             ]
           }
@@ -256,7 +296,7 @@ export default {
           name: 'Ansible',
           key: 'ansible',
           level: 'high',
-          experience: 9,
+          experience: 11,
           details: {
             'FR': [
               'Déploiement de projets applicatifs',
@@ -274,7 +314,7 @@ export default {
           name: 'Python',
           key: 'python',
           level: 'expert',
-          experience: 15,
+          experience: 17,
           details: {
             'FR': [
               '100% orienté objet',
@@ -295,8 +335,8 @@ export default {
           img: '/img/techs/django.svg',
           name: 'Django',
           key: 'django',
-          level: 'expert',
-          experience: 9,
+          level: 'high',
+          experience: 11,
           details: {
             'FR': [
               'API REST',
@@ -318,7 +358,7 @@ export default {
           name: 'VueJS',
           key: 'vuejs',
           level: 'high',
-          experience: 5,
+          experience: 7,
           details: {
             'FR': [
               'Développement de gros projets SPA',
@@ -335,7 +375,7 @@ export default {
           icon: 'mdi-language-cpp',
           name: 'C++',
           key: 'cpp',
-          level: 'high',
+          level: 'medium',
           experience: 8,
           details: {
             'FR': [
@@ -354,7 +394,7 @@ export default {
           name: 'HTML',
           key: 'html',
           level: 'high',
-          experience: 14
+          experience: 16
         },
         {
           categories: ['front'],
@@ -362,7 +402,7 @@ export default {
           name: 'Javascript',
           key: 'js',
           level: 'high',
-          experience: 10,
+          experience: 12,
           details: {
             'FR': [
               'Longue expérience (jQuery, AngularJS, VueJS, ES6)',
@@ -397,16 +437,16 @@ export default {
           icon: 'mdi-chart-bell-curve-cumulative',
           name:  { 'FR': 'Observabilité', 'EN': 'Observability' },
           key: 'observability',
-          level: 'medium',
-          experience: 2,
+          level: 'high',
+          experience: 4,
           details: {
             'FR': [
-              'Prometheus, Thanos, Grafana',
+              'Prometheus, Grafana',
               'FluentD, ElasticSearch, Kibana',
               'OpenTelemetry'
             ],
             'EN': [
-              'Prometheus, Thanos, Grafana',
+              'Prometheus, Grafana',
               'FluentD, ElasticSearch, Kibana',
               'OpenTelemetry'
             ]
@@ -418,18 +458,18 @@ export default {
           name: 'Linux',
           key: 'linux',
           level: 'high',
-          experience: 12,
+          experience: 14,
           details: {
             'FR': [
               'Administration : utilisateurs, SSH, sudoers',
               'Gestion de paquets. Installations / Configurations.',
               'cron, systemd, DNS, rotation de logs',
-              'Distribs : Debian, Alpine, CentOS'
+              'Distribs : Debian, Alpine'
             ],
             'EN': [
               'User management, Package management',
               'cron, systemd, DNS, logs analysis',
-              'Debian, Alpine, CentOS'
+              'Debian, Alpine'
             ]
           }
         },
@@ -439,7 +479,7 @@ export default {
           name: 'Reverse Proxy',
           key: 'reverseproxy',
           level: 'high',
-          experience: 8,
+          experience: 10,
           details: {
             'FR': [
               'Nginx, Traefik, HaProxy',
@@ -458,7 +498,7 @@ export default {
           icon: 'mdi-terraform',
           name: { 'FR': 'Terraform', 'EN': 'Terraform' },
           level: 'high',
-          experience: 2,
+          experience: 4,
           key: 'terraform',
           details: {
             'FR': [
@@ -495,7 +535,7 @@ export default {
           name: 'GIT',
           key: 'git',
           level: 'high',
-          experience: 12,
+          experience: 14,
           details: {
             'FR': [
               'Utilisation quotidienne',
@@ -514,7 +554,7 @@ export default {
           icon: 'mdi-database-search',
           name: 'SQL',
           key: 'sql',
-          level: 'high',
+          level: 'medium',
           experience: 11,
           details: {
             'FR': [

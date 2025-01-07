@@ -35,8 +35,8 @@
           {
             icon: 'mdi-language-python',
             text: {
-              'FR': 'Développeur full-stack',
-              'EN': 'Backend full-stack'
+              'FR': 'Ex - Développeur full-stack',
+              'EN': 'Prev: fullstack dev'
             }
           }
         ]
@@ -45,9 +45,3 @@
   }
 </script>
 
-
-      translations: {
-        SUBTITLE: {
-          'FR': 'Ingénieur web en quête de challenge',
-          'EN': 'Full-stack web engineer, looking for challenge'
-        },

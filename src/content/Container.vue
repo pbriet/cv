@@ -189,9 +189,9 @@ export default {
 
             Je n'ai pas peur de me confronter à l'inconnu et d'apprendre de nouvelles technologies/pratiques. J'y trouve d'ailleurs un certain plaisir.<br>
 
-            Je me suis auto-formé à : Django, VueJS, Ansible, Docker, Kubernetes. Puis j'ai formé les équipes dans lesquelles je travaillais.<br><br>
+            Je me suis auto-formé à : Django, VueJS, Ansible, Docker, Kubernetes, Talos Linux. Puis j'ai formé les équipes dans lesquelles je travaillais.<br><br>
 
-            Si j'apprécie certains univers (Python, Kubernetes, ...), je suis parfaitement ouvert au travail dans d'autres environnements (Java, NodeJS, ...)
+            Si j'apprécie certains univers (Kubernetes, on prem, ...), je suis parfaitement ouvert au travail dans d'autres environnements (Cloud notamment)
           `,
           'EN': `<h3>An entrepreneurial spirit</h3>
 
@@ -210,9 +210,9 @@ export default {
 
             I'm not afraid to learn new technologies/methodologies. On the contrary, I really enjoy it.<br>
 
-            I have self-learned: Django, VueJS, Ansible, Docker, Kubernetes. Once I master a new technology, I also like to share it to my colleagues.<br><br>
+            I have self-learned: Django, VueJS, Ansible, Docker, Kubernetes, Talos Linux. Once I master a new technology, I also like to share it to my colleagues.<br><br>
 
-            I'm fond of some technologies that I already master (Python, Kubernetes, ...), but I'm open to discover other environments (Java, NodeJS, ...)`
+            I'm fond of some technologies that I already master ((Kubernetes, on prem, ...), but I'm open to discover other environments (e.g. cloud)`
         }
 
       }
